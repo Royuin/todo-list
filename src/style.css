@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  box-sizing: border-box;
+}
+
 body {
   background-color: #f8f0e3;
 }
