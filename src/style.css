@@ -18,3 +18,8 @@ aside {
   background-color: var(--mid-grey);
   height: 100vh;
 }
+
+.page-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
