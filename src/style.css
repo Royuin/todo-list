@@ -7,8 +7,14 @@
 
 :root {
   --off-white: #f8f0e3;
+  --mid-grey: #a2a1aa;
 }
 
 body {
   background-color: var(--off-white);
+}
+
+aside {
+  background-color: var(--mid-grey);
+  height: 100vh;
 }
