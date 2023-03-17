@@ -6,12 +6,14 @@
 }
 
 :root {
+  --main-color: #4338ca;
+  --desaturated-main-color: #818cf8;
   --off-white: #f8f0e3;
   --mid-grey: #a2a1aa;
 }
 
 body {
-  background-color: var(--off-white);
+  background-color: var(--desaturated-main-color);
 }
 
 aside {
