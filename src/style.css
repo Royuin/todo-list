@@ -25,3 +25,12 @@ aside {
   display: grid;
   grid-template-columns: 1fr 5fr;
 }
+
+.card {
+  display: grid;
+  width: 300px;
+  padding: 15px;
+  background-color: var(--off-white);
+  border-left: 4px solid var(--main-color);
+  box-shadow: 10px 10px 20px var(--main-color);
+}
