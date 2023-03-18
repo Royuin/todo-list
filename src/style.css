@@ -67,3 +67,10 @@ form {
   padding: 15px;
   display: grid;
 }
+
+.button-style-reset {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+}
