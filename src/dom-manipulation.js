@@ -4,6 +4,11 @@ export default function makeForm() {
   form.classList = 'todo-form';
   todoHeader.appendChild(form);
 
+  const exitButton = document.createElement('button');
+  exitButton.classList = 'exit-button';
+  exitButton.textContent = 'X';
+  form.appendChild(exitButton);
+
   const titleLabel = document.createElement('label');
   titleLabel.for = 'title';
   titleLabel.textContent = 'Title';
