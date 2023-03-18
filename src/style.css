@@ -55,7 +55,6 @@ main {
 form {
   background-color: var(--off-white);
   max-width: 65%;
-  height: 30vw;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
