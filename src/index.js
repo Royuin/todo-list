@@ -11,3 +11,8 @@ addTodoBtn.addEventListener('click', () => {
     removeTodoForm();
   }
 });
+
+document.querySelector('.exit-button').addEventListener('click', (event) => {
+  event.preventDefault();
+  removeTodoForm();
+});
