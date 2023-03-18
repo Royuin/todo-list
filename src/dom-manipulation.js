@@ -6,6 +6,7 @@ export default function makeForm() {
 
   const exitButton = document.createElement('button');
   exitButton.classList = 'exit-button';
+  exitButton.classList = 'button-style-reset';
   exitButton.textContent = 'X';
   form.appendChild(exitButton);
 
