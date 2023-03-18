@@ -1,4 +1,4 @@
-export default function makeForm() {
+export function makeTodoForm() {
   const todoHeader = document.querySelector('.todo-header');
   const form = document.createElement('form');
   form.classList = 'todo-form';
@@ -57,4 +57,10 @@ export default function makeForm() {
   priorityInput.appendChild(hightPriority);
   form.appendChild(priorityLabel);
   form.appendChild(priorityInput);
+}
+
+export function removeTodoForm() {
+  const todoHeader = document.querySelector('.todo-header');
+  const todoForm = document.querySelector('.todo-form');
+  todoHeader.removeChild(todoForm);
 }
