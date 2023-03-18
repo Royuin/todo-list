@@ -35,8 +35,7 @@ export function makeTodoForm() {
   todoHeader.appendChild(form);
 
   const exitButton = document.createElement('button');
-  exitButton.classList = 'exit-button';
-  exitButton.classList = 'button-style-reset';
+  exitButton.classList.add('exit-button', 'button-style-reset');
   exitButton.textContent = 'X';
   form.appendChild(exitButton);
 
@@ -90,8 +89,8 @@ export function makeTodoForm() {
 
   const submitBtn = document.createElement('button');
   submitBtn.textContent = 'Create To-do';
+  submitBtn.type = 'submit';
   form.appendChild(submitBtn);
-  submitBtn.addEven;
 }
 
 export function removeTodoForm() {
