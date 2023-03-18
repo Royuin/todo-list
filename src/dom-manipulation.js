@@ -1,4 +1,7 @@
 export function makeTodoForm() {
+  const overlay = document.getElementById('overlay');
+  overlay.classList = 'active';
+
   const todoHeader = document.querySelector('.todo-header');
   const form = document.createElement('form');
   form.classList = 'todo-form';
@@ -60,7 +63,9 @@ export function makeTodoForm() {
 }
 
 export function removeTodoForm() {
+  const overlay = document.getElementById('overlay');
   const todoHeader = document.querySelector('.todo-header');
   const todoForm = document.querySelector('.todo-form');
   todoHeader.removeChild(todoForm);
+  overlay.classList.remove('active');
 }
