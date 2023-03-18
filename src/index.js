@@ -7,12 +7,12 @@ addTodoBtn.addEventListener('click', () => {
   const todoForm = document.querySelector('.todo-form');
   if (todoForm === null) {
     makeTodoForm();
+    const exitBtn = document.querySelector('.exit-button');
+    exitBtn.addEventListener('click', (event) => {
+      event.preventDefault();
+      removeTodoForm();
+    });
   } else if (document.querySelector('.todo-form') !== undefined) {
     removeTodoForm();
   }
-});
-
-document.querySelector('.exit-button').addEventListener('click', (event) => {
-  event.preventDefault();
-  removeTodoForm();
 });
