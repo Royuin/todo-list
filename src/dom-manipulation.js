@@ -1,3 +1,30 @@
+export function addTodo(obj) {
+  const ul = document.querySelector('.todo-list');
+  const todoTitle = obj.title;
+  const listItem = document.createElement('li');
+  listItem.classList = todoTitle;
+  listItem.classList = 'card';
+
+  const itemHeading = document.createElement('h2');
+  itemHeading.textContent = todoTitle;
+  listItem.appendChild(itemHeading);
+
+  const priority = document.createElement('p');
+  priority.textContent = obj.priority;
+  listItem.appendChild(priority);
+
+  const description = document.createElement('p');
+  description.textContent = obj.description;
+  listItem.appendChild(description);
+
+  const dueDate = document.createElement('input');
+  dueDate.type = 'date';
+  dueDate.value = obj.due;
+  listItem.appendChild(dueDate);
+
+  ul.appendChild(listItem);
+}
+
 export function makeTodoForm() {
   const overlay = document.getElementById('overlay');
   overlay.classList = 'active';
@@ -14,11 +41,11 @@ export function makeTodoForm() {
   form.appendChild(exitButton);
 
   const titleLabel = document.createElement('label');
-  titleLabel.for = 'title';
+  titleLabel.for = 'todoTitle';
   titleLabel.textContent = 'Title';
   const titleInput = document.createElement('input');
   titleInput.type = 'text';
-  titleInput.id = 'title';
+  titleInput.id = 'todoTitle';
   titleInput.name = 'text';
   form.appendChild(titleLabel);
   form.appendChild(titleInput);
@@ -60,6 +87,11 @@ export function makeTodoForm() {
   priorityInput.appendChild(hightPriority);
   form.appendChild(priorityLabel);
   form.appendChild(priorityInput);
+
+  const submitBtn = document.createElement('button');
+  submitBtn.textContent = 'Create To-do';
+  form.appendChild(submitBtn);
+  submitBtn.addEven;
 }
 
 export function removeTodoForm() {
