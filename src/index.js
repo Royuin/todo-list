@@ -5,8 +5,14 @@ import {
   addTodo,
   makeProjectForm,
   removeProjectForm,
+  addProject,
 } from './dom-manipulation';
-import { makeTodoObj, currentProject } from './objects';
+import {
+  makeTodoObj,
+  currentProject,
+  projectList,
+  makeProjectObj,
+} from './objects';
 
 const addTodoBtn = document.querySelector('.add-todo');
 
@@ -41,5 +47,12 @@ projectBtn.addEventListener('click', () => {
   exitBtn.addEventListener('click', (event) => {
     event.preventDefault();
     removeProjectForm();
+  });
+  const projectSubmit = document.getElementById('project-submit');
+  projectSubmit.addEventListener('click', (event) => {
+    event.preventDefault();
+    makeProjectObj();
+    const thisProject = projectList.slice(-1)[0];
+    addProject(thisProject);
   });
 });
