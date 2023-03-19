@@ -15,9 +15,9 @@ function addToProject(todo) {
   myProject.todos.push(todo);
 }
 
-let currentProject = myProject;
+export let currentProject = myProject;
 
-function makeTodoObj() {
+export function makeTodoObj() {
   const title = document.getElementById('todoTitle').value;
   const priority = document.getElementById('priority').value;
   const description = document.getElementById('description').value;
