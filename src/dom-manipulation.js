@@ -49,6 +49,24 @@ export function makeTodoForm() {
   form.appendChild(titleLabel);
   form.appendChild(titleInput);
 
+  const priorityLabel = document.createElement('label');
+  priorityLabel.for = 'priority';
+  priorityLabel.textContent = 'Priority';
+  const priorityInput = document.createElement('select');
+  priorityInput.id = 'priority';
+  priorityInput.name = 'priority';
+  const lowPriority = document.createElement('option');
+  lowPriority.textContent = 'Low';
+  const mediumPriority = document.createElement('option');
+  mediumPriority.textContent = 'Medium';
+  const hightPriority = document.createElement('option');
+  hightPriority.textContent = 'High';
+  priorityInput.appendChild(lowPriority);
+  priorityInput.appendChild(mediumPriority);
+  priorityInput.appendChild(hightPriority);
+  form.appendChild(priorityLabel);
+  form.appendChild(priorityInput);
+
   const descriptionLabel = document.createElement('label');
   descriptionLabel.for = 'descriptionLabel';
   descriptionLabel.textContent = 'Description';
@@ -68,24 +86,6 @@ export function makeTodoForm() {
   dueDateInput.name = 'due';
   form.appendChild(dueDateLabel);
   form.appendChild(dueDateInput);
-
-  const priorityLabel = document.createElement('label');
-  priorityLabel.for = 'priority';
-  priorityLabel.textContent = 'Priority';
-  const priorityInput = document.createElement('select');
-  priorityInput.id = 'priority';
-  priorityInput.name = 'priority';
-  const lowPriority = document.createElement('option');
-  lowPriority.textContent = 'Low';
-  const mediumPriority = document.createElement('option');
-  mediumPriority.textContent = 'Medium';
-  const hightPriority = document.createElement('option');
-  hightPriority.textContent = 'High';
-  priorityInput.appendChild(lowPriority);
-  priorityInput.appendChild(mediumPriority);
-  priorityInput.appendChild(hightPriority);
-  form.appendChild(priorityLabel);
-  form.appendChild(priorityInput);
 
   const submitBtn = document.createElement('button');
   submitBtn.textContent = 'Create To-do';
