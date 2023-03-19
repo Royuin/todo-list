@@ -101,3 +101,42 @@ export function removeTodoForm() {
   todoHeader.removeChild(todoForm);
   overlay.classList.remove('active');
 }
+
+export function makeProjectForm() {
+  const overlay = document.getElementById('overlay');
+  overlay.classList = 'active';
+
+  const projectHeader = document.querySelector('.project-header');
+  const form = document.createElement('form');
+  form.classList = 'project-form';
+  projectHeader.appendChild(form);
+
+  const exitButton = document.createElement('button');
+  exitButton.classList.add('exit-button', 'button-style-reset');
+  exitButton.textContent = 'X';
+  form.appendChild(exitButton);
+
+  const titleLabel = document.createElement('label');
+  titleLabel.for = 'projectTitle';
+  titleLabel.textContent = 'Title';
+  const titleInput = document.createElement('input');
+  titleInput.type = 'text';
+  titleInput.id = 'projectTitle';
+  titleInput.name = 'text';
+  form.appendChild(titleLabel);
+  form.appendChild(titleInput);
+
+  const submitBtn = document.createElement('button');
+  submitBtn.textContent = 'Create Project';
+  submitBtn.type = 'submit';
+  submitBtn.setAttribute('id', 'project-submit');
+  form.appendChild(submitBtn);
+}
+
+export function removeProjectForm() {
+  const overlay = document.getElementById('overlay');
+  const projectHeader = document.querySelector('.project-header');
+  const projectForm = document.querySelector('.project-form');
+  projectHeader.removeChild(projectForm);
+  overlay.classList.remove('active');
+}
