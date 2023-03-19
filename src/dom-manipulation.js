@@ -102,6 +102,20 @@ export function removeTodoForm() {
   overlay.classList.remove('active');
 }
 
+export function addProject(obj) {
+  const projectTitle = obj.title;
+
+  const projectUl = document.querySelector('.project-list');
+  const newLi = document.createElement('li');
+
+  projectUl.appendChild(newLi);
+
+  const projectBtn = document.createElement('button');
+  projectBtn.className += 'project button-style-reset ';
+  projectBtn.textContent = projectTitle;
+  newLi.appendChild(projectBtn);
+}
+
 export function makeProjectForm() {
   const overlay = document.getElementById('overlay');
   overlay.classList = 'active';
