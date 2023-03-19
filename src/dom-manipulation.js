@@ -90,6 +90,7 @@ export function makeTodoForm() {
   const submitBtn = document.createElement('button');
   submitBtn.textContent = 'Create To-do';
   submitBtn.type = 'submit';
+  submitBtn.setAttribute('id', 'todo-submit');
   form.appendChild(submitBtn);
 }
 
