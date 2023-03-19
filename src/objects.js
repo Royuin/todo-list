@@ -6,3 +6,11 @@ const myProject = {
 };
 
 const projectList = [myProject];
+
+function todoFactory(title, priority, description, due) {
+  return { title, priority, description, due };
+}
+
+function addToProject(todo) {
+  myProject.todos.push(todo);
+}
