@@ -5,7 +5,7 @@ const myProject = {
   todos: [],
 };
 
-const projectList = [myProject];
+export const projectList = [myProject];
 
 function todoFactory(title, priority, description, due) {
   return { title, priority, description, due };
@@ -25,4 +25,19 @@ export function makeTodoObj() {
 
   const todo = todoFactory(title, priority, description, dateDue);
   addToProject(todo);
+}
+
+function projectFactory(title) {
+  return { title, todos: [] };
+}
+
+function addToProjectList(project) {
+  projectList.push(project);
+}
+
+export function makeProjectObj() {
+  const title = document.getElementById('projectTitle').value;
+  const project = projectFactory(title);
+  addToProjectList(project);
+  currentProject = project;
 }
