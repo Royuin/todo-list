@@ -1,5 +1,11 @@
 import './style.css';
-import { makeTodoForm, removeTodoForm, addTodo } from './dom-manipulation';
+import {
+  makeTodoForm,
+  removeTodoForm,
+  addTodo,
+  makeProjectForm,
+  removeProjectForm,
+} from './dom-manipulation';
 import { makeTodoObj, currentProject } from './objects';
 
 const addTodoBtn = document.querySelector('.add-todo');
@@ -26,4 +32,14 @@ addTodoBtn.addEventListener('click', () => {
   } else if (document.querySelector('.todo-form') !== undefined) {
     removeTodoForm();
   }
+});
+
+const projectBtn = document.querySelector('.add-project');
+projectBtn.addEventListener('click', () => {
+  makeProjectForm();
+  const exitBtn = document.querySelector('.exit-button');
+  exitBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    removeProjectForm();
+  });
 });
