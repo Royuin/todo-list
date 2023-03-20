@@ -12,6 +12,7 @@ import {
   currentProject,
   projectList,
   makeProjectObj,
+  changeCurrentProject,
 } from './objects';
 
 const addTodoBtn = document.querySelector('.add-todo');
@@ -40,8 +41,8 @@ addTodoBtn.addEventListener('click', () => {
   }
 });
 
-const projectBtn = document.querySelector('.add-project');
-projectBtn.addEventListener('click', () => {
+const addProjectBtn = document.querySelector('.add-project');
+addProjectBtn.addEventListener('click', () => {
   makeProjectForm();
   const exitBtn = document.querySelector('.exit-button');
   exitBtn.addEventListener('click', (event) => {
@@ -54,5 +55,11 @@ projectBtn.addEventListener('click', () => {
     makeProjectObj();
     const thisProject = projectList.slice(-1)[0];
     addProject(thisProject);
+    const projectBtns = document.querySelectorAll('.project');
+    projectBtns.forEach((item) => {
+      item.addEventListener('click', () => {
+        changeCurrentProject(item);
+      });
+    });
   });
 });
