@@ -18,9 +18,10 @@ body {
 }
 
 aside {
-  background-color: var(--mid-grey);
+  background-color: var(--dark-grey);
   height: 100vh;
   grid-row: 1 / 3;
+  color: var(--off-white);
 }
 
 .page-wrapper {
@@ -37,6 +38,7 @@ main {
   grid-column: 2 / 3;
   margin-left: 35px;
 }
+
 .card {
   display: grid;
   width: 300px;
@@ -47,9 +49,9 @@ main {
 }
 
 .project {
-  background-color: var(--mid-grey);
   border: none;
   cursor: pointer;
+  color: var(--off-white);
 }
 
 form {
