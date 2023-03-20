@@ -41,3 +41,12 @@ export function makeProjectObj() {
   addToProjectList(project);
   currentProject = project;
 }
+
+export function changeCurrentProject(projectItem) {
+  const projectTitle = projectItem.textContent;
+  projectList.forEach((element) => {
+    if (element.title === projectTitle) {
+      currentProject = element;
+    }
+  });
+}
