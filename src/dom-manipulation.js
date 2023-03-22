@@ -154,3 +154,13 @@ export function removeProjectForm() {
   projectHeader.removeChild(projectForm);
   overlay.classList.remove('active');
 }
+
+export function changeCurrentProjectClass(thisProject) {
+  const projects = document.querySelectorAll('.project');
+  projects.forEach((element) => {
+    if (element.classList.contains('current-project') !== undefined) {
+      element.classList.remove('current-project');
+    }
+    thisProject.classList.add('current-project');
+  });
+}
