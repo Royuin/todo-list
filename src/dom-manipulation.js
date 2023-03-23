@@ -10,7 +10,6 @@ export function addTodo(obj) {
   listItem.appendChild(itemHeading);
 
   const priority = document.createElement('select');
-  priority.textContent = obj.priority;
   const lowPriority = document.createElement('option');
   lowPriority.textContent = 'Low';
   const mediumPriority = document.createElement('option');
@@ -21,6 +20,14 @@ export function addTodo(obj) {
   priority.appendChild(mediumPriority);
   priority.appendChild(hightPriority);
   listItem.appendChild(priority);
+
+  (function setSelected() {
+    const selectOptions = Array.from(priority.options);
+    const found = selectOptions.find(
+      (element) => element.text === obj.priority
+    );
+    found.selected = true;
+  })();
 
   const description = document.createElement('p');
   description.textContent = obj.description;
