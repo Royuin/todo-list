@@ -1,3 +1,5 @@
+import { updatePriority } from './objects';
+
 export function addTodo(obj) {
   const ul = document.querySelector('.todo-list');
   const todoTitle = obj.title;
@@ -28,6 +30,10 @@ export function addTodo(obj) {
     );
     found.selected = true;
   })();
+
+  priority.addEventListener('change', () => {
+    updatePriority(priority);
+  });
 
   const description = document.createElement('p');
   description.textContent = obj.description;

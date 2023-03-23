@@ -57,3 +57,14 @@ export function changeCurrentProject(projectItem) {
     }
   });
 }
+
+export function updatePriority(priority) {
+  const todoDom = priority.parentNode;
+  const todoDomTitle = todoDom.querySelector('h2');
+  const todoArray = currentProject.todos;
+
+  const result = todoArray.find(
+    (element) => element.title === todoDomTitle.textContent
+  );
+  result.priority = priority.value;
+}
