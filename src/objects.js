@@ -1,4 +1,7 @@
-import { changeCurrentProjectClass } from './dom-manipulation';
+import {
+  changeCurrentProjectClass,
+  changeProjectTodos,
+} from './dom-manipulation';
 
 const defaultProject = document.querySelector('.my-project');
 
@@ -13,11 +16,11 @@ function todoFactory(title, priority, description, due) {
   return { title, priority, description, due };
 }
 
-function addToProject(todo) {
-  myProject.todos.push(todo);
-}
-
 export let currentProject = myProject;
+
+function addToProject(todo) {
+  currentProject.todos.push(todo);
+}
 
 export function makeTodoObj() {
   const title = document.getElementById('todoTitle').value;
@@ -50,6 +53,7 @@ export function changeCurrentProject(projectItem) {
     if (element.title === projectTitle) {
       currentProject = element;
       changeCurrentProjectClass(projectItem);
+      changeProjectTodos(currentProject);
     }
   });
 }
