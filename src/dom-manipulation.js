@@ -164,3 +164,15 @@ export function changeCurrentProjectClass(thisProject) {
     thisProject.classList.add('current-project');
   });
 }
+
+export function changeProjectTodos(project) {
+  const todoList = document.querySelector('.todo-list');
+  while (todoList.firstChild) {
+    todoList.removeChild(todoList.lastChild);
+  }
+
+  const todoArray = project.todos;
+  todoArray.forEach((element) => {
+    addTodo(element);
+  });
+}
