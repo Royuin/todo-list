@@ -54,6 +54,10 @@ main {
   color: var(--off-white);
 }
 
+.project:hover {
+  border-bottom: solid 3px var(--desaturated-main-color);
+}
+
 form {
   background-color: var(--off-white);
   max-width: 65%;
@@ -96,4 +100,8 @@ form {
 .todo-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.current-project {
+  border-bottom: solid 3px var(--desaturated-main-color);
 }
