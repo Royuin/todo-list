@@ -1,3 +1,5 @@
+import { changeCurrentProjectClass } from './dom-manipulation';
+
 const defaultProject = document.querySelector('.my-project');
 
 const myProject = {
@@ -47,6 +49,7 @@ export function changeCurrentProject(projectItem) {
   projectList.forEach((element) => {
     if (element.title === projectTitle) {
       currentProject = element;
+      changeCurrentProjectClass(projectItem);
     }
   });
 }
