@@ -9,8 +9,17 @@ export function addTodo(obj) {
   itemHeading.textContent = todoTitle;
   listItem.appendChild(itemHeading);
 
-  const priority = document.createElement('p');
+  const priority = document.createElement('select');
   priority.textContent = obj.priority;
+  const lowPriority = document.createElement('option');
+  lowPriority.textContent = 'Low';
+  const mediumPriority = document.createElement('option');
+  mediumPriority.textContent = 'Medium';
+  const hightPriority = document.createElement('option');
+  hightPriority.textContent = 'High';
+  priority.appendChild(lowPriority);
+  priority.appendChild(mediumPriority);
+  priority.appendChild(hightPriority);
   listItem.appendChild(priority);
 
   const description = document.createElement('p');
