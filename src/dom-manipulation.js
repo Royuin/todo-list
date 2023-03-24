@@ -11,6 +11,13 @@ export function addTodo(obj) {
   itemHeading.textContent = todoTitle;
   listItem.appendChild(itemHeading);
 
+  const editBtn = document.createElement('button');
+  const editIcon = document.createElement('img');
+  editBtn.classList.add('edit-btn', 'button-style-reset');
+  editIcon.src = '/src/assets/icons/file-edit.svg';
+  editBtn.appendChild(editIcon);
+  listItem.appendChild(editBtn);
+
   const priority = document.createElement('select');
   const lowPriority = document.createElement('option');
   lowPriority.textContent = 'Low';
@@ -198,3 +205,9 @@ export function changeProjectTodos(project) {
     addTodo(element);
   });
 }
+
+// function editTodo(e) {
+//   const todoDom = e.parentNode;
+//   const todoDomTitle = todoDom.querySelector('h2');
+//   const todoArray = .todos;
+// }
