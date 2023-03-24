@@ -111,3 +111,8 @@ form {
 .current-project {
   border-bottom: solid 3px var(--desaturated-main-color);
 }
+
+.edit-btn {
+  width: 10%;
+  height: 10%;
+}
