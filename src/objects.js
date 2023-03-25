@@ -67,3 +67,8 @@ export function updatePriority(priority) {
   );
   result.priority = priority.value;
 }
+
+export function removeTodoObj(todo) {
+  const index = currentProject.todos.indexOf(todo);
+  currentProject.todos.splice(index, 1);
+}
