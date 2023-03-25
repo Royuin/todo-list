@@ -8,6 +8,13 @@ export function removeTodoForm() {
   overlay.classList.remove('active');
 }
 
+export function removeTodos() {
+  const todoUl = document.querySelector('.todo-list');
+  while (todoUl.firstChild) {
+    todoUl.removeChild(todoUl.lastChild);
+  }
+}
+
 export function addTodo(todoArray) {
   for (let i = 0; i < todoArray.length; i += 1) {
     const obj = todoArray[i];
