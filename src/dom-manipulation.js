@@ -30,7 +30,7 @@ export function addTodo(todoArray) {
 
     const editBtn = document.createElement('button');
     const editIcon = document.createElement('img');
-    editBtn.classList.add('edit-btn', 'button-style-reset');
+    editBtn.classList.add('edit-btn', 'button-style-reset', 'icon');
     editIcon.src = '/src/assets/icons/file-edit.svg';
     editBtn.dataset.index = todoArray.indexOf(obj);
     editIcon.dataset.index = todoArray.indexOf(obj);
@@ -40,7 +40,7 @@ export function addTodo(todoArray) {
     const deleteBtn = document.createElement('button');
     const deleteIcon = document.createElement('img');
     deleteIcon.src = '/src/assets/icons/delete.svg';
-    deleteBtn.classList.add('delete-button', 'button-style-reset');
+    deleteBtn.classList.add('delete-button', 'button-style-reset', 'icon');
     listItem.appendChild(deleteBtn);
     deleteBtn.appendChild(deleteIcon);
 
