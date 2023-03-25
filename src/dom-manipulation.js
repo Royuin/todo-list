@@ -37,6 +37,13 @@ export function addTodo(todoArray) {
     editBtn.appendChild(editIcon);
     listItem.appendChild(editBtn);
 
+    const deleteBtn = document.createElement('button');
+    const deleteIcon = document.createElement('img');
+    deleteIcon.src = '/src/assets/icons/delete.svg';
+    deleteBtn.classList.add('delete-button', 'button-style-reset');
+    listItem.appendChild(deleteBtn);
+    deleteBtn.appendChild(deleteIcon);
+
     const priority = document.createElement('select');
     const lowPriority = document.createElement('option');
     lowPriority.textContent = 'Low';
