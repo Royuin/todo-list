@@ -6,6 +6,8 @@ import {
   makeProjectForm,
   removeProjectForm,
   addProject,
+  editTodoForm,
+  removeTodos,
 } from './dom-manipulation';
 import {
   makeTodoObj,
@@ -32,9 +34,20 @@ addTodoBtn.addEventListener('click', () => {
       makeTodoObj();
       const todoArray = currentProject.todos;
 
-      const thisTodo = todoArray.slice(-1)[0];
+      removeTodos();
+      addTodo(todoArray);
 
-      addTodo(thisTodo);
+      const editBtn = document.querySelectorAll('.edit-btn');
+      editBtn.forEach((element) => {
+        element.addEventListener('click', () => {
+          const todoListItem = element.parentElement;
+
+          const index = todoListItem.dataset.index;
+          const todo = todoArray[index];
+
+          editTodoForm(todo, todoArray);
+        });
+      });
     });
   } else if (document.querySelector('.todo-form') !== undefined) {
     removeTodoForm();
@@ -59,6 +72,20 @@ addProjectBtn.addEventListener('click', () => {
     projectBtns.forEach((item) => {
       item.addEventListener('click', () => {
         changeCurrentProject(item);
+        const todoArray = currentProject.todos;
+        removeTodos();
+        addTodo(todoArray);
+        const editBtn = document.querySelectorAll('.edit-btn');
+        editBtn.forEach((element) => {
+          element.addEventListener('click', () => {
+            const todoListItem = element.parentElement;
+
+            const index = todoListItem.dataset.index;
+            const todo = todoArray[index];
+
+            editTodoForm(todo, todoArray);
+          });
+        });
       });
     });
   });
