@@ -1,57 +1,70 @@
 import { updatePriority } from './objects';
 
-export function addTodo(obj) {
-  const ul = document.querySelector('.todo-list');
-  const todoTitle = obj.title;
-  const listItem = document.createElement('li');
-  listItem.classList = todoTitle;
-  listItem.classList = 'card';
+export function removeTodoForm() {
+  const overlay = document.getElementById('overlay');
+  const todoHeader = document.querySelector('.todo-header');
+  const todoForm = document.querySelector('.todo-form');
+  todoHeader.removeChild(todoForm);
+  overlay.classList.remove('active');
+}
 
-  const itemHeading = document.createElement('h2');
-  itemHeading.textContent = todoTitle;
-  listItem.appendChild(itemHeading);
+export function addTodo(todoArray) {
+  for (let i = 0; i < todoArray.length; i += 1) {
+    const obj = todoArray[i];
+    const ul = document.querySelector('.todo-list');
+    const todoTitle = obj.title;
+    const listItem = document.createElement('li');
+    listItem.dataset.index = todoArray.indexOf(obj);
+    listItem.classList += ' card';
 
-  const editBtn = document.createElement('button');
-  const editIcon = document.createElement('img');
-  editBtn.classList.add('edit-btn', 'button-style-reset');
-  editIcon.src = '/src/assets/icons/file-edit.svg';
-  editBtn.appendChild(editIcon);
-  listItem.appendChild(editBtn);
+    const itemHeading = document.createElement('h2');
+    itemHeading.textContent = todoTitle;
+    listItem.appendChild(itemHeading);
 
-  const priority = document.createElement('select');
-  const lowPriority = document.createElement('option');
-  lowPriority.textContent = 'Low';
-  const mediumPriority = document.createElement('option');
-  mediumPriority.textContent = 'Medium';
-  const hightPriority = document.createElement('option');
-  hightPriority.textContent = 'High';
-  priority.appendChild(lowPriority);
-  priority.appendChild(mediumPriority);
-  priority.appendChild(hightPriority);
-  listItem.appendChild(priority);
+    const editBtn = document.createElement('button');
+    const editIcon = document.createElement('img');
+    editBtn.classList.add('edit-btn', 'button-style-reset');
+    editIcon.src = '/src/assets/icons/file-edit.svg';
+    editBtn.dataset.index = todoArray.indexOf(obj);
+    editIcon.dataset.index = todoArray.indexOf(obj);
+    editBtn.appendChild(editIcon);
+    listItem.appendChild(editBtn);
 
-  (function setSelected() {
-    const selectOptions = Array.from(priority.options);
-    const found = selectOptions.find(
-      (element) => element.text === obj.priority
-    );
-    found.selected = true;
-  })();
+    const priority = document.createElement('select');
+    const lowPriority = document.createElement('option');
+    lowPriority.textContent = 'Low';
+    const mediumPriority = document.createElement('option');
+    mediumPriority.textContent = 'Medium';
+    const hightPriority = document.createElement('option');
+    hightPriority.textContent = 'High';
+    priority.appendChild(lowPriority);
+    priority.appendChild(mediumPriority);
+    priority.appendChild(hightPriority);
+    listItem.appendChild(priority);
 
-  priority.addEventListener('change', () => {
-    updatePriority(priority);
-  });
+    (function setSelected() {
+      const selectOptions = Array.from(priority.options);
+      const found = selectOptions.find(
+        (element) => element.text === obj.priority
+      );
+      found.selected = true;
+    })();
 
-  const description = document.createElement('p');
-  description.textContent = obj.description;
-  listItem.appendChild(description);
+    priority.addEventListener('change', () => {
+      updatePriority(priority);
+    });
 
-  const dueDate = document.createElement('input');
-  dueDate.type = 'date';
-  dueDate.value = obj.due;
-  listItem.appendChild(dueDate);
+    const description = document.createElement('p');
+    description.textContent = obj.description;
+    listItem.appendChild(description);
 
-  ul.appendChild(listItem);
+    const dueDate = document.createElement('input');
+    dueDate.type = 'date';
+    dueDate.value = obj.due;
+    listItem.appendChild(dueDate);
+
+    ul.appendChild(listItem);
+  }
 }
 
 export function makeTodoForm() {
@@ -121,14 +134,6 @@ export function makeTodoForm() {
   submitBtn.type = 'submit';
   submitBtn.setAttribute('id', 'todo-submit');
   form.appendChild(submitBtn);
-}
-
-export function removeTodoForm() {
-  const overlay = document.getElementById('overlay');
-  const todoHeader = document.querySelector('.todo-header');
-  const todoForm = document.querySelector('.todo-form');
-  todoHeader.removeChild(todoForm);
-  overlay.classList.remove('active');
 }
 
 export function addProject(obj) {
@@ -205,9 +210,3 @@ export function changeProjectTodos(project) {
     addTodo(element);
   });
 }
-
-// function editTodo(e) {
-//   const todoDom = e.parentNode;
-//   const todoDomTitle = todoDom.querySelector('h2');
-//   const todoArray = .todos;
-// }
