@@ -15,9 +15,44 @@ import {
   projectList,
   makeProjectObj,
   changeCurrentProject,
+  removeTodoObj,
 } from './objects';
 
 const addTodoBtn = document.querySelector('.add-todo');
+
+function deleteListener(todoArray) {
+  const deleteBtns = document.querySelectorAll('.delete-button');
+  deleteBtns.forEach((element) => {
+    element.addEventListener('click', () => {
+      const todoUl = document.querySelector('.todo-list');
+      const todoListItem = element.parentElement;
+
+      const index = todoListItem.dataset.index;
+      const todo = todoArray[index];
+      removeTodoObj(todo);
+      todoUl.removeChild(todoListItem);
+    });
+  });
+}
+function editListener(todoArray) {
+  const editBtn = document.querySelectorAll('.edit-btn');
+  editBtn.forEach((element) => {
+    element.addEventListener('click', () => {
+      const todoListItem = element.parentElement;
+
+      const index = todoListItem.dataset.index;
+      const todo = todoArray[index];
+
+      editTodoForm(todo, todoArray);
+
+      const editSubmitBtn = document.getElementById('edit-todo-submit');
+
+      editSubmitBtn.addEventListener('click', () => {
+        deleteListener(todoArray);
+      });
+    });
+  });
+}
 
 addTodoBtn.addEventListener('click', () => {
   const todoForm = document.querySelector('.todo-form');
@@ -28,6 +63,7 @@ addTodoBtn.addEventListener('click', () => {
       event.preventDefault();
       removeTodoForm();
     });
+
     const submitBtn = document.getElementById('todo-submit');
     submitBtn.addEventListener('click', (event) => {
       event.preventDefault();
@@ -37,17 +73,7 @@ addTodoBtn.addEventListener('click', () => {
       removeTodos();
       addTodo(todoArray);
 
-      const editBtn = document.querySelectorAll('.edit-btn');
-      editBtn.forEach((element) => {
-        element.addEventListener('click', () => {
-          const todoListItem = element.parentElement;
-
-          const index = todoListItem.dataset.index;
-          const todo = todoArray[index];
-
-          editTodoForm(todo, todoArray);
-        });
-      });
+      editListener(todoArray);
     });
   } else if (document.querySelector('.todo-form') !== undefined) {
     removeTodoForm();
@@ -75,17 +101,8 @@ addProjectBtn.addEventListener('click', () => {
         const todoArray = currentProject.todos;
         removeTodos();
         addTodo(todoArray);
-        const editBtn = document.querySelectorAll('.edit-btn');
-        editBtn.forEach((element) => {
-          element.addEventListener('click', () => {
-            const todoListItem = element.parentElement;
-
-            const index = todoListItem.dataset.index;
-            const todo = todoArray[index];
-
-            editTodoForm(todo, todoArray);
-          });
-        });
+        editListener(todoArray);
+        deleteListener(todoArray);
       });
     });
   });
