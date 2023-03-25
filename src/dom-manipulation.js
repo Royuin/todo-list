@@ -217,3 +217,103 @@ export function changeProjectTodos(project) {
     addTodo(element);
   });
 }
+
+export function editTodoForm(todoObj, todoArray) {
+  const overlay = document.getElementById('overlay');
+  overlay.classList = 'active';
+
+  const todoHeader = document.querySelector('.todo-header');
+  const form = document.createElement('form');
+  form.classList = 'todo-form';
+  todoHeader.appendChild(form);
+
+  const exitButton = document.createElement('button');
+  exitButton.classList.add('exit-button', 'button-style-reset');
+  exitButton.textContent = 'X';
+  form.appendChild(exitButton);
+
+  exitButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    removeTodoForm();
+  });
+
+  const titleLabel = document.createElement('label');
+  titleLabel.for = 'todoTitle';
+  titleLabel.textContent = 'Title';
+  const titleInput = document.createElement('input');
+  titleInput.type = 'text';
+  titleInput.id = 'todoTitle';
+  titleInput.name = 'text';
+  titleInput.value = todoObj.title;
+  form.appendChild(titleLabel);
+  form.appendChild(titleInput);
+
+  const priorityLabel = document.createElement('label');
+  priorityLabel.for = 'priority';
+  priorityLabel.textContent = 'Priority';
+  const priorityInput = document.createElement('select');
+  priorityInput.id = 'priority';
+  priorityInput.name = 'priority';
+  const lowPriority = document.createElement('option');
+  lowPriority.textContent = 'Low';
+  const mediumPriority = document.createElement('option');
+  mediumPriority.textContent = 'Medium';
+  const hightPriority = document.createElement('option');
+  hightPriority.textContent = 'High';
+  priorityInput.appendChild(lowPriority);
+  priorityInput.appendChild(mediumPriority);
+  priorityInput.appendChild(hightPriority);
+  form.appendChild(priorityLabel);
+  form.appendChild(priorityInput);
+  priorityInput.value = todoObj.priority;
+
+  const descriptionLabel = document.createElement('label');
+  descriptionLabel.for = 'descriptionLabel';
+  descriptionLabel.textContent = 'Description';
+  const descriptionTextarea = document.createElement('textarea');
+  descriptionTextarea.id = 'description';
+  descriptionTextarea.id = 'description';
+  descriptionTextarea.value = todoObj.description;
+
+  form.appendChild(descriptionLabel);
+  form.appendChild(descriptionTextarea);
+
+  const dueDateLabel = document.createElement('label');
+  dueDateLabel.for = 'due';
+  dueDateLabel.textContent = 'Date due:';
+  const dueDateInput = document.createElement('input');
+  dueDateInput.type = 'date';
+  dueDateInput.id = 'due';
+  dueDateInput.name = 'due';
+  form.appendChild(dueDateLabel);
+  form.appendChild(dueDateInput);
+  dueDateInput.value = todoObj.dateDue;
+
+  const submitBtn = document.createElement('button');
+  submitBtn.textContent = 'Edit To-do';
+  submitBtn.type = 'submit';
+  submitBtn.setAttribute('id', 'edit-todo-submit');
+  form.appendChild(submitBtn);
+
+  submitBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    todoObj.title = titleInput.value;
+    todoObj.priority = priorityInput.value;
+    todoObj.description = descriptionTextarea.value;
+    todoObj.dateDue = dueDateInput.value;
+
+    removeTodos();
+    addTodo(todoArray);
+    const editBtn = document.querySelectorAll('.edit-btn');
+    editBtn.forEach((element) => {
+      element.addEventListener('click', () => {
+        const todoListItem = element.parentElement;
+
+        const index = todoListItem.dataset.index;
+        const todo = todoArray[index];
+
+        editTodoForm(todo, todoArray);
+      });
+    });
+  });
+}
