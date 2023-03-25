@@ -16,12 +16,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
 // Imports
 
 
+
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../src/assets/Roboto-Regular.ttf */ "./src/assets/Roboto-Regular.ttf"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  font: inherit;\n  box-sizing: border-box;\n}\n\n:root {\n  --main-color: #4338ca;\n  --desaturated-main-color: #818cf8;\n  --off-white: #f8f0e3;\n  --mid-grey: #a2a1aa;\n  --dark-grey: #222;\n}\n\nbody {\n  background-color: var(--desaturated-main-color);\n}\n\naside {\n  background-color: var(--dark-grey);\n  height: 100vh;\n  grid-row: 1 / 3;\n  color: var(--off-white);\n}\n\n.page-wrapper {\n  display: grid;\n  grid-template-columns: 1fr 5fr;\n  grid-template-rows: 1fr 8fr;\n}\n\nheader {\n  grid-column: 2 / 3;\n}\n\nmain {\n  grid-column: 2 / 3;\n  margin-left: 35px;\n}\n\n.card {\n  display: grid;\n  width: 300px;\n  padding: 15px;\n  background-color: var(--off-white);\n  border-left: 4px solid var(--main-color);\n  box-shadow: 10px 10px 20px var(--main-color);\n}\n\n.project {\n  border: none;\n  cursor: pointer;\n  color: var(--off-white);\n}\n\nform {\n  background-color: var(--off-white);\n  max-width: 65%;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  border: 1px solid var(--dark-grey);\n  border-radius: 10px;\n  z-index: 10;\n  position: fixed;\n  box-shadow: 0 0 200px var(--main-color);\n  padding: 15px;\n  display: grid;\n}\n\n.button-style-reset {\n  cursor: pointer;\n  border: none;\n  outline: none;\n  background: none;\n}\n\n#overlay {\n  position: fixed;\n  opacity: 0;\n  transition: 200ms ease-in-out;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background-color: rgba(0, 0, 0, 0.5);\n  pointer-events: none;\n}\n\n#overlay.active {\n  opacity: 1;\n  pointer-events: all;\n}\n\n.todo-list {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n}\n", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;EACE,SAAS;EACT,UAAU;EACV,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,qBAAqB;EACrB,iCAAiC;EACjC,oBAAoB;EACpB,mBAAmB;EACnB,iBAAiB;AACnB;;AAEA;EACE,+CAA+C;AACjD;;AAEA;EACE,kCAAkC;EAClC,aAAa;EACb,eAAe;EACf,uBAAuB;AACzB;;AAEA;EACE,aAAa;EACb,8BAA8B;EAC9B,2BAA2B;AAC7B;;AAEA;EACE,kBAAkB;AACpB;;AAEA;EACE,kBAAkB;EAClB,iBAAiB;AACnB;;AAEA;EACE,aAAa;EACb,YAAY;EACZ,aAAa;EACb,kCAAkC;EAClC,wCAAwC;EACxC,4CAA4C;AAC9C;;AAEA;EACE,YAAY;EACZ,eAAe;EACf,uBAAuB;AACzB;;AAEA;EACE,kCAAkC;EAClC,cAAc;EACd,QAAQ;EACR,SAAS;EACT,gCAAgC;EAChC,kCAAkC;EAClC,mBAAmB;EACnB,WAAW;EACX,eAAe;EACf,uCAAuC;EACvC,aAAa;EACb,aAAa;AACf;;AAEA;EACE,eAAe;EACf,YAAY;EACZ,aAAa;EACb,gBAAgB;AAClB;;AAEA;EACE,eAAe;EACf,UAAU;EACV,6BAA6B;EAC7B,MAAM;EACN,SAAS;EACT,OAAO;EACP,QAAQ;EACR,oCAAoC;EACpC,oBAAoB;AACtB;;AAEA;EACE,UAAU;EACV,mBAAmB;AACrB;;AAEA;EACE,aAAa;EACb,8BAA8B;AAChC","sourcesContent":["* {\n  margin: 0;\n  padding: 0;\n  font: inherit;\n  box-sizing: border-box;\n}\n\n:root {\n  --main-color: #4338ca;\n  --desaturated-main-color: #818cf8;\n  --off-white: #f8f0e3;\n  --mid-grey: #a2a1aa;\n  --dark-grey: #222;\n}\n\nbody {\n  background-color: var(--desaturated-main-color);\n}\n\naside {\n  background-color: var(--dark-grey);\n  height: 100vh;\n  grid-row: 1 / 3;\n  color: var(--off-white);\n}\n\n.page-wrapper {\n  display: grid;\n  grid-template-columns: 1fr 5fr;\n  grid-template-rows: 1fr 8fr;\n}\n\nheader {\n  grid-column: 2 / 3;\n}\n\nmain {\n  grid-column: 2 / 3;\n  margin-left: 35px;\n}\n\n.card {\n  display: grid;\n  width: 300px;\n  padding: 15px;\n  background-color: var(--off-white);\n  border-left: 4px solid var(--main-color);\n  box-shadow: 10px 10px 20px var(--main-color);\n}\n\n.project {\n  border: none;\n  cursor: pointer;\n  color: var(--off-white);\n}\n\nform {\n  background-color: var(--off-white);\n  max-width: 65%;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  border: 1px solid var(--dark-grey);\n  border-radius: 10px;\n  z-index: 10;\n  position: fixed;\n  box-shadow: 0 0 200px var(--main-color);\n  padding: 15px;\n  display: grid;\n}\n\n.button-style-reset {\n  cursor: pointer;\n  border: none;\n  outline: none;\n  background: none;\n}\n\n#overlay {\n  position: fixed;\n  opacity: 0;\n  transition: 200ms ease-in-out;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background-color: rgba(0, 0, 0, 0.5);\n  pointer-events: none;\n}\n\n#overlay.active {\n  opacity: 1;\n  pointer-events: all;\n}\n\n.todo-list {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  font: inherit;\n  box-sizing: border-box;\n}\n\n:root {\n  --main-color: #4338ca;\n  --desaturated-main-color: #818cf8;\n  --off-white: #f8f0e3;\n  --mid-grey: #a2a1aa;\n  --dark-grey: #222;\n}\n\n@font-face {\n  font-family: 'roboto';\n  src: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n}\n\nbody {\n  background-color: var(--desaturated-main-color);\n  font-family: 'roboto', sans-serif;\n}\n\naside {\n  background-color: var(--dark-grey);\n  height: 100vh;\n  grid-row: 1 / 3;\n  color: var(--off-white);\n}\n\n.page-wrapper {\n  display: grid;\n  grid-template-columns: 1fr 5fr;\n  grid-template-rows: 1fr 8fr;\n}\n\nheader {\n  grid-column: 2 / 3;\n}\n\nmain {\n  grid-column: 2 / 3;\n  margin-left: 35px;\n}\n\n.card {\n  display: grid;\n  width: 300px;\n  padding: 15px;\n  background-color: var(--off-white);\n  border-left: 4px solid var(--main-color);\n  box-shadow: 10px 10px 20px var(--main-color);\n}\n\n.project {\n  border: none;\n  cursor: pointer;\n  color: var(--off-white);\n}\n\n.project:hover {\n  border-bottom: solid 3px var(--desaturated-main-color);\n}\n\nform {\n  background-color: var(--off-white);\n  max-width: 65%;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  border: 1px solid var(--dark-grey);\n  border-radius: 10px;\n  z-index: 10;\n  position: fixed;\n  box-shadow: 0 0 200px var(--main-color);\n  padding: 15px;\n  display: grid;\n}\n\n.button-style-reset {\n  cursor: pointer;\n  border: none;\n  outline: none;\n  background: none;\n}\n\n#overlay {\n  position: fixed;\n  opacity: 0;\n  transition: 200ms ease-in-out;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background-color: rgba(0, 0, 0, 0.5);\n  pointer-events: none;\n}\n\n#overlay.active {\n  opacity: 1;\n  pointer-events: all;\n}\n\n.todo-list {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n}\n\n.current-project {\n  border-bottom: solid 3px var(--desaturated-main-color);\n}\n\n.edit-btn {\n  width: 10%;\n  height: 10%;\n}\n", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;EACE,SAAS;EACT,UAAU;EACV,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,qBAAqB;EACrB,iCAAiC;EACjC,oBAAoB;EACpB,mBAAmB;EACnB,iBAAiB;AACnB;;AAEA;EACE,qBAAqB;EACrB,4CAAwC;AAC1C;;AAEA;EACE,+CAA+C;EAC/C,iCAAiC;AACnC;;AAEA;EACE,kCAAkC;EAClC,aAAa;EACb,eAAe;EACf,uBAAuB;AACzB;;AAEA;EACE,aAAa;EACb,8BAA8B;EAC9B,2BAA2B;AAC7B;;AAEA;EACE,kBAAkB;AACpB;;AAEA;EACE,kBAAkB;EAClB,iBAAiB;AACnB;;AAEA;EACE,aAAa;EACb,YAAY;EACZ,aAAa;EACb,kCAAkC;EAClC,wCAAwC;EACxC,4CAA4C;AAC9C;;AAEA;EACE,YAAY;EACZ,eAAe;EACf,uBAAuB;AACzB;;AAEA;EACE,sDAAsD;AACxD;;AAEA;EACE,kCAAkC;EAClC,cAAc;EACd,QAAQ;EACR,SAAS;EACT,gCAAgC;EAChC,kCAAkC;EAClC,mBAAmB;EACnB,WAAW;EACX,eAAe;EACf,uCAAuC;EACvC,aAAa;EACb,aAAa;AACf;;AAEA;EACE,eAAe;EACf,YAAY;EACZ,aAAa;EACb,gBAAgB;AAClB;;AAEA;EACE,eAAe;EACf,UAAU;EACV,6BAA6B;EAC7B,MAAM;EACN,SAAS;EACT,OAAO;EACP,QAAQ;EACR,oCAAoC;EACpC,oBAAoB;AACtB;;AAEA;EACE,UAAU;EACV,mBAAmB;AACrB;;AAEA;EACE,aAAa;EACb,8BAA8B;AAChC;;AAEA;EACE,sDAAsD;AACxD;;AAEA;EACE,UAAU;EACV,WAAW;AACb","sourcesContent":["* {\n  margin: 0;\n  padding: 0;\n  font: inherit;\n  box-sizing: border-box;\n}\n\n:root {\n  --main-color: #4338ca;\n  --desaturated-main-color: #818cf8;\n  --off-white: #f8f0e3;\n  --mid-grey: #a2a1aa;\n  --dark-grey: #222;\n}\n\n@font-face {\n  font-family: 'roboto';\n  src: url(/src/assets/Roboto-Regular.ttf);\n}\n\nbody {\n  background-color: var(--desaturated-main-color);\n  font-family: 'roboto', sans-serif;\n}\n\naside {\n  background-color: var(--dark-grey);\n  height: 100vh;\n  grid-row: 1 / 3;\n  color: var(--off-white);\n}\n\n.page-wrapper {\n  display: grid;\n  grid-template-columns: 1fr 5fr;\n  grid-template-rows: 1fr 8fr;\n}\n\nheader {\n  grid-column: 2 / 3;\n}\n\nmain {\n  grid-column: 2 / 3;\n  margin-left: 35px;\n}\n\n.card {\n  display: grid;\n  width: 300px;\n  padding: 15px;\n  background-color: var(--off-white);\n  border-left: 4px solid var(--main-color);\n  box-shadow: 10px 10px 20px var(--main-color);\n}\n\n.project {\n  border: none;\n  cursor: pointer;\n  color: var(--off-white);\n}\n\n.project:hover {\n  border-bottom: solid 3px var(--desaturated-main-color);\n}\n\nform {\n  background-color: var(--off-white);\n  max-width: 65%;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  border: 1px solid var(--dark-grey);\n  border-radius: 10px;\n  z-index: 10;\n  position: fixed;\n  box-shadow: 0 0 200px var(--main-color);\n  padding: 15px;\n  display: grid;\n}\n\n.button-style-reset {\n  cursor: pointer;\n  border: none;\n  outline: none;\n  background: none;\n}\n\n#overlay {\n  position: fixed;\n  opacity: 0;\n  transition: 200ms ease-in-out;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background-color: rgba(0, 0, 0, 0.5);\n  pointer-events: none;\n}\n\n#overlay.active {\n  opacity: 1;\n  pointer-events: all;\n}\n\n.todo-list {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n}\n\n.current-project {\n  border-bottom: solid 3px var(--desaturated-main-color);\n}\n\n.edit-btn {\n  width: 10%;\n  height: 10%;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -118,6 +123,41 @@ module.exports = function (cssWithMappingToString) {
     }
   };
   return list;
+};
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/getUrl.js":
+/*!********************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/getUrl.js ***!
+  \********************************************************/
+/***/ ((module) => {
+
+
+
+module.exports = function (url, options) {
+  if (!options) {
+    options = {};
+  }
+  if (!url) {
+    return url;
+  }
+  url = String(url.__esModule ? url.default : url);
+
+  // If url is already wrapped in quotes, remove them
+  if (/^['"].*['"]$/.test(url)) {
+    url = url.slice(1, -1);
+  }
+  if (options.hash) {
+    url += options.hash;
+  }
+
+  // Should url be wrapped?
+  // See https://drafts.csswg.org/css-values-3/#urls
+  if (/["'() \t\n]|(%20)/.test(url) || options.needQuotes) {
+    return "\"".concat(url.replace(/"/g, '\\"').replace(/\n/g, "\\n"), "\"");
+  }
+  return url;
 };
 
 /***/ }),
@@ -478,36 +518,90 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "addProject": () => (/* binding */ addProject),
 /* harmony export */   "addTodo": () => (/* binding */ addTodo),
+/* harmony export */   "changeCurrentProjectClass": () => (/* binding */ changeCurrentProjectClass),
+/* harmony export */   "changeProjectTodos": () => (/* binding */ changeProjectTodos),
+/* harmony export */   "editTodoForm": () => (/* binding */ editTodoForm),
 /* harmony export */   "makeProjectForm": () => (/* binding */ makeProjectForm),
 /* harmony export */   "makeTodoForm": () => (/* binding */ makeTodoForm),
 /* harmony export */   "removeProjectForm": () => (/* binding */ removeProjectForm),
-/* harmony export */   "removeTodoForm": () => (/* binding */ removeTodoForm)
+/* harmony export */   "removeTodoForm": () => (/* binding */ removeTodoForm),
+/* harmony export */   "removeTodos": () => (/* binding */ removeTodos)
 /* harmony export */ });
-function addTodo(obj) {
-  const ul = document.querySelector('.todo-list');
-  const todoTitle = obj.title;
-  const listItem = document.createElement('li');
-  listItem.classList = todoTitle;
-  listItem.classList = 'card';
+/* harmony import */ var _objects__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./objects */ "./src/objects.js");
 
-  const itemHeading = document.createElement('h2');
-  itemHeading.textContent = todoTitle;
-  listItem.appendChild(itemHeading);
 
-  const priority = document.createElement('p');
-  priority.textContent = obj.priority;
-  listItem.appendChild(priority);
+function removeTodoForm() {
+  const overlay = document.getElementById('overlay');
+  const todoHeader = document.querySelector('.todo-header');
+  const todoForm = document.querySelector('.todo-form');
+  todoHeader.removeChild(todoForm);
+  overlay.classList.remove('active');
+}
 
-  const description = document.createElement('p');
-  description.textContent = obj.description;
-  listItem.appendChild(description);
+function removeTodos() {
+  const todoUl = document.querySelector('.todo-list');
+  while (todoUl.firstChild) {
+    todoUl.removeChild(todoUl.lastChild);
+  }
+}
 
-  const dueDate = document.createElement('input');
-  dueDate.type = 'date';
-  dueDate.value = obj.due;
-  listItem.appendChild(dueDate);
+function addTodo(todoArray) {
+  for (let i = 0; i < todoArray.length; i += 1) {
+    const obj = todoArray[i];
+    const ul = document.querySelector('.todo-list');
+    const todoTitle = obj.title;
+    const listItem = document.createElement('li');
+    listItem.dataset.index = todoArray.indexOf(obj);
+    listItem.classList += ' card';
 
-  ul.appendChild(listItem);
+    const itemHeading = document.createElement('h2');
+    itemHeading.textContent = todoTitle;
+    listItem.appendChild(itemHeading);
+
+    const editBtn = document.createElement('button');
+    const editIcon = document.createElement('img');
+    editBtn.classList.add('edit-btn', 'button-style-reset');
+    editIcon.src = '/src/assets/icons/file-edit.svg';
+    editBtn.dataset.index = todoArray.indexOf(obj);
+    editIcon.dataset.index = todoArray.indexOf(obj);
+    editBtn.appendChild(editIcon);
+    listItem.appendChild(editBtn);
+
+    const priority = document.createElement('select');
+    const lowPriority = document.createElement('option');
+    lowPriority.textContent = 'Low';
+    const mediumPriority = document.createElement('option');
+    mediumPriority.textContent = 'Medium';
+    const hightPriority = document.createElement('option');
+    hightPriority.textContent = 'High';
+    priority.appendChild(lowPriority);
+    priority.appendChild(mediumPriority);
+    priority.appendChild(hightPriority);
+    listItem.appendChild(priority);
+
+    (function setSelected() {
+      const selectOptions = Array.from(priority.options);
+      const found = selectOptions.find(
+        (element) => element.text === obj.priority
+      );
+      found.selected = true;
+    })();
+
+    priority.addEventListener('change', () => {
+      (0,_objects__WEBPACK_IMPORTED_MODULE_0__.updatePriority)(priority);
+    });
+
+    const description = document.createElement('p');
+    description.textContent = obj.description;
+    listItem.appendChild(description);
+
+    const dueDate = document.createElement('input');
+    dueDate.type = 'date';
+    dueDate.value = obj.due;
+    listItem.appendChild(dueDate);
+
+    ul.appendChild(listItem);
+  }
 }
 
 function makeTodoForm() {
@@ -579,14 +673,6 @@ function makeTodoForm() {
   form.appendChild(submitBtn);
 }
 
-function removeTodoForm() {
-  const overlay = document.getElementById('overlay');
-  const todoHeader = document.querySelector('.todo-header');
-  const todoForm = document.querySelector('.todo-form');
-  todoHeader.removeChild(todoForm);
-  overlay.classList.remove('active');
-}
-
 function addProject(obj) {
   const projectTitle = obj.title;
 
@@ -640,6 +726,128 @@ function removeProjectForm() {
   overlay.classList.remove('active');
 }
 
+function changeCurrentProjectClass(thisProject) {
+  const projects = document.querySelectorAll('.project');
+  projects.forEach((element) => {
+    if (element.classList.contains('current-project') !== undefined) {
+      element.classList.remove('current-project');
+    }
+    thisProject.classList.add('current-project');
+  });
+}
+
+function changeProjectTodos(project) {
+  const todoList = document.querySelector('.todo-list');
+  while (todoList.firstChild) {
+    todoList.removeChild(todoList.lastChild);
+  }
+
+  const todoArray = project.todos;
+  todoArray.forEach((element) => {
+    addTodo(element);
+  });
+}
+
+function editTodoForm(todoObj, todoArray) {
+  const overlay = document.getElementById('overlay');
+  overlay.classList = 'active';
+
+  const todoHeader = document.querySelector('.todo-header');
+  const form = document.createElement('form');
+  form.classList = 'todo-form';
+  todoHeader.appendChild(form);
+
+  const exitButton = document.createElement('button');
+  exitButton.classList.add('exit-button', 'button-style-reset');
+  exitButton.textContent = 'X';
+  form.appendChild(exitButton);
+
+  exitButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    removeTodoForm();
+  });
+
+  const titleLabel = document.createElement('label');
+  titleLabel.for = 'todoTitle';
+  titleLabel.textContent = 'Title';
+  const titleInput = document.createElement('input');
+  titleInput.type = 'text';
+  titleInput.id = 'todoTitle';
+  titleInput.name = 'text';
+  titleInput.value = todoObj.title;
+  form.appendChild(titleLabel);
+  form.appendChild(titleInput);
+
+  const priorityLabel = document.createElement('label');
+  priorityLabel.for = 'priority';
+  priorityLabel.textContent = 'Priority';
+  const priorityInput = document.createElement('select');
+  priorityInput.id = 'priority';
+  priorityInput.name = 'priority';
+  const lowPriority = document.createElement('option');
+  lowPriority.textContent = 'Low';
+  const mediumPriority = document.createElement('option');
+  mediumPriority.textContent = 'Medium';
+  const hightPriority = document.createElement('option');
+  hightPriority.textContent = 'High';
+  priorityInput.appendChild(lowPriority);
+  priorityInput.appendChild(mediumPriority);
+  priorityInput.appendChild(hightPriority);
+  form.appendChild(priorityLabel);
+  form.appendChild(priorityInput);
+  priorityInput.value = todoObj.priority;
+
+  const descriptionLabel = document.createElement('label');
+  descriptionLabel.for = 'descriptionLabel';
+  descriptionLabel.textContent = 'Description';
+  const descriptionTextarea = document.createElement('textarea');
+  descriptionTextarea.id = 'description';
+  descriptionTextarea.id = 'description';
+  descriptionTextarea.value = todoObj.description;
+
+  form.appendChild(descriptionLabel);
+  form.appendChild(descriptionTextarea);
+
+  const dueDateLabel = document.createElement('label');
+  dueDateLabel.for = 'due';
+  dueDateLabel.textContent = 'Date due:';
+  const dueDateInput = document.createElement('input');
+  dueDateInput.type = 'date';
+  dueDateInput.id = 'due';
+  dueDateInput.name = 'due';
+  form.appendChild(dueDateLabel);
+  form.appendChild(dueDateInput);
+  dueDateInput.value = todoObj.dateDue;
+
+  const submitBtn = document.createElement('button');
+  submitBtn.textContent = 'Edit To-do';
+  submitBtn.type = 'submit';
+  submitBtn.setAttribute('id', 'edit-todo-submit');
+  form.appendChild(submitBtn);
+
+  submitBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    todoObj.title = titleInput.value;
+    todoObj.priority = priorityInput.value;
+    todoObj.description = descriptionTextarea.value;
+    todoObj.dateDue = dueDateInput.value;
+
+    removeTodos();
+    addTodo(todoArray);
+    const editBtn = document.querySelectorAll('.edit-btn');
+    editBtn.forEach((element) => {
+      element.addEventListener('click', () => {
+        const todoListItem = element.parentElement;
+
+        const index = todoListItem.dataset.index;
+        const todo = todoArray[index];
+
+        editTodoForm(todo, todoArray);
+      });
+    });
+  });
+}
+
 
 /***/ }),
 
@@ -655,8 +863,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "currentProject": () => (/* binding */ currentProject),
 /* harmony export */   "makeProjectObj": () => (/* binding */ makeProjectObj),
 /* harmony export */   "makeTodoObj": () => (/* binding */ makeTodoObj),
-/* harmony export */   "projectList": () => (/* binding */ projectList)
+/* harmony export */   "projectList": () => (/* binding */ projectList),
+/* harmony export */   "updatePriority": () => (/* binding */ updatePriority)
 /* harmony export */ });
+/* harmony import */ var _dom_manipulation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dom-manipulation */ "./src/dom-manipulation.js");
+
+
 const defaultProject = document.querySelector('.my-project');
 
 const myProject = {
@@ -670,11 +882,11 @@ function todoFactory(title, priority, description, due) {
   return { title, priority, description, due };
 }
 
-function addToProject(todo) {
-  myProject.todos.push(todo);
-}
-
 let currentProject = myProject;
+
+function addToProject(todo) {
+  currentProject.todos.push(todo);
+}
 
 function makeTodoObj() {
   const title = document.getElementById('todoTitle').value;
@@ -706,10 +918,32 @@ function changeCurrentProject(projectItem) {
   projectList.forEach((element) => {
     if (element.title === projectTitle) {
       currentProject = element;
+      (0,_dom_manipulation__WEBPACK_IMPORTED_MODULE_0__.changeCurrentProjectClass)(projectItem);
     }
   });
 }
 
+function updatePriority(priority) {
+  const todoDom = priority.parentNode;
+  const todoDomTitle = todoDom.querySelector('h2');
+  const todoArray = currentProject.todos;
+
+  const result = todoArray.find(
+    (element) => element.title === todoDomTitle.textContent
+  );
+  result.priority = priority.value;
+}
+
+
+/***/ }),
+
+/***/ "./src/assets/Roboto-Regular.ttf":
+/*!***************************************!*\
+  !*** ./src/assets/Roboto-Regular.ttf ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "fc2b5060f7accec5cf74.ttf";
 
 /***/ })
 
@@ -739,6 +973,9 @@ function changeCurrentProject(projectItem) {
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
@@ -764,6 +1001,18 @@ function changeCurrentProject(projectItem) {
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -778,6 +1027,52 @@ function changeCurrentProject(projectItem) {
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"main": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		// no on chunks loaded
+/******/ 		
+/******/ 		// no jsonp function
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */
@@ -817,9 +1112,20 @@ addTodoBtn.addEventListener('click', () => {
       (0,_objects__WEBPACK_IMPORTED_MODULE_2__.makeTodoObj)();
       const todoArray = _objects__WEBPACK_IMPORTED_MODULE_2__.currentProject.todos;
 
-      const thisTodo = todoArray.slice(-1)[0];
+      (0,_dom_manipulation__WEBPACK_IMPORTED_MODULE_1__.removeTodos)();
+      (0,_dom_manipulation__WEBPACK_IMPORTED_MODULE_1__.addTodo)(todoArray);
 
-      (0,_dom_manipulation__WEBPACK_IMPORTED_MODULE_1__.addTodo)(thisTodo);
+      const editBtn = document.querySelectorAll('.edit-btn');
+      editBtn.forEach((element) => {
+        element.addEventListener('click', () => {
+          const todoListItem = element.parentElement;
+
+          const index = todoListItem.dataset.index;
+          const todo = todoArray[index];
+
+          (0,_dom_manipulation__WEBPACK_IMPORTED_MODULE_1__.editTodoForm)(todo, todoArray);
+        });
+      });
     });
   } else if (document.querySelector('.todo-form') !== undefined) {
     (0,_dom_manipulation__WEBPACK_IMPORTED_MODULE_1__.removeTodoForm)();
@@ -844,6 +1150,20 @@ addProjectBtn.addEventListener('click', () => {
     projectBtns.forEach((item) => {
       item.addEventListener('click', () => {
         (0,_objects__WEBPACK_IMPORTED_MODULE_2__.changeCurrentProject)(item);
+        const todoArray = _objects__WEBPACK_IMPORTED_MODULE_2__.currentProject.todos;
+        (0,_dom_manipulation__WEBPACK_IMPORTED_MODULE_1__.removeTodos)();
+        (0,_dom_manipulation__WEBPACK_IMPORTED_MODULE_1__.addTodo)(todoArray);
+        const editBtn = document.querySelectorAll('.edit-btn');
+        editBtn.forEach((element) => {
+          element.addEventListener('click', () => {
+            const todoListItem = element.parentElement;
+
+            const index = todoListItem.dataset.index;
+            const todo = todoArray[index];
+
+            (0,_dom_manipulation__WEBPACK_IMPORTED_MODULE_1__.editTodoForm)(todo, todoArray);
+          });
+        });
       });
     });
   });
