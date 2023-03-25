@@ -53,7 +53,6 @@ export function changeCurrentProject(projectItem) {
     if (element.title === projectTitle) {
       currentProject = element;
       changeCurrentProjectClass(projectItem);
-      changeProjectTodos(currentProject);
     }
   });
 }
