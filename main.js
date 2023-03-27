@@ -26,7 +26,7 @@ var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  font: inherit;\n  box-sizing: border-box;\n}\n\n:root {\n  --main-color: #4338ca;\n  --desaturated-main-color: #818cf8;\n  --off-white: #f8f0e3;\n  --mid-grey: #a2a1aa;\n  --dark-grey: #222;\n}\n\n@font-face {\n  font-family: 'roboto';\n  src: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n}\n\nbody {\n  background-color: var(--desaturated-main-color);\n  font-family: 'roboto', sans-serif;\n}\n\naside {\n  background-color: var(--dark-grey);\n  height: 100vh;\n  grid-row: 1 / 3;\n  color: var(--off-white);\n}\n\n.page-wrapper {\n  display: grid;\n  grid-template-columns: 1fr 5fr;\n  grid-template-rows: 1fr 8fr;\n}\n\nheader {\n  grid-column: 2 / 3;\n}\n\nmain {\n  grid-column: 2 / 3;\n  margin-left: 35px;\n}\n\n.card {\n  display: grid;\n  width: 300px;\n  padding: 15px;\n  background-color: var(--off-white);\n  border-left: 4px solid var(--main-color);\n  box-shadow: 10px 10px 20px var(--main-color);\n}\n\n.project {\n  border: none;\n  cursor: pointer;\n  color: var(--off-white);\n}\n\n.project:hover {\n  border-bottom: solid 3px var(--desaturated-main-color);\n}\n\nform {\n  background-color: var(--off-white);\n  max-width: 65%;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  border: 1px solid var(--dark-grey);\n  border-radius: 10px;\n  z-index: 10;\n  position: fixed;\n  box-shadow: 0 0 200px var(--main-color);\n  padding: 15px;\n  display: grid;\n}\n\n.button-style-reset {\n  cursor: pointer;\n  border: none;\n  outline: none;\n  background: none;\n}\n\n#overlay {\n  position: fixed;\n  opacity: 0;\n  transition: 200ms ease-in-out;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background-color: rgba(0, 0, 0, 0.5);\n  pointer-events: none;\n}\n\n#overlay.active {\n  opacity: 1;\n  pointer-events: all;\n}\n\n.todo-list {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n}\n\n.current-project {\n  border-bottom: solid 3px var(--desaturated-main-color);\n}\n\n.edit-btn {\n  width: 10%;\n  height: 10%;\n}\n", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;EACE,SAAS;EACT,UAAU;EACV,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,qBAAqB;EACrB,iCAAiC;EACjC,oBAAoB;EACpB,mBAAmB;EACnB,iBAAiB;AACnB;;AAEA;EACE,qBAAqB;EACrB,4CAAwC;AAC1C;;AAEA;EACE,+CAA+C;EAC/C,iCAAiC;AACnC;;AAEA;EACE,kCAAkC;EAClC,aAAa;EACb,eAAe;EACf,uBAAuB;AACzB;;AAEA;EACE,aAAa;EACb,8BAA8B;EAC9B,2BAA2B;AAC7B;;AAEA;EACE,kBAAkB;AACpB;;AAEA;EACE,kBAAkB;EAClB,iBAAiB;AACnB;;AAEA;EACE,aAAa;EACb,YAAY;EACZ,aAAa;EACb,kCAAkC;EAClC,wCAAwC;EACxC,4CAA4C;AAC9C;;AAEA;EACE,YAAY;EACZ,eAAe;EACf,uBAAuB;AACzB;;AAEA;EACE,sDAAsD;AACxD;;AAEA;EACE,kCAAkC;EAClC,cAAc;EACd,QAAQ;EACR,SAAS;EACT,gCAAgC;EAChC,kCAAkC;EAClC,mBAAmB;EACnB,WAAW;EACX,eAAe;EACf,uCAAuC;EACvC,aAAa;EACb,aAAa;AACf;;AAEA;EACE,eAAe;EACf,YAAY;EACZ,aAAa;EACb,gBAAgB;AAClB;;AAEA;EACE,eAAe;EACf,UAAU;EACV,6BAA6B;EAC7B,MAAM;EACN,SAAS;EACT,OAAO;EACP,QAAQ;EACR,oCAAoC;EACpC,oBAAoB;AACtB;;AAEA;EACE,UAAU;EACV,mBAAmB;AACrB;;AAEA;EACE,aAAa;EACb,8BAA8B;AAChC;;AAEA;EACE,sDAAsD;AACxD;;AAEA;EACE,UAAU;EACV,WAAW;AACb","sourcesContent":["* {\n  margin: 0;\n  padding: 0;\n  font: inherit;\n  box-sizing: border-box;\n}\n\n:root {\n  --main-color: #4338ca;\n  --desaturated-main-color: #818cf8;\n  --off-white: #f8f0e3;\n  --mid-grey: #a2a1aa;\n  --dark-grey: #222;\n}\n\n@font-face {\n  font-family: 'roboto';\n  src: url(/src/assets/Roboto-Regular.ttf);\n}\n\nbody {\n  background-color: var(--desaturated-main-color);\n  font-family: 'roboto', sans-serif;\n}\n\naside {\n  background-color: var(--dark-grey);\n  height: 100vh;\n  grid-row: 1 / 3;\n  color: var(--off-white);\n}\n\n.page-wrapper {\n  display: grid;\n  grid-template-columns: 1fr 5fr;\n  grid-template-rows: 1fr 8fr;\n}\n\nheader {\n  grid-column: 2 / 3;\n}\n\nmain {\n  grid-column: 2 / 3;\n  margin-left: 35px;\n}\n\n.card {\n  display: grid;\n  width: 300px;\n  padding: 15px;\n  background-color: var(--off-white);\n  border-left: 4px solid var(--main-color);\n  box-shadow: 10px 10px 20px var(--main-color);\n}\n\n.project {\n  border: none;\n  cursor: pointer;\n  color: var(--off-white);\n}\n\n.project:hover {\n  border-bottom: solid 3px var(--desaturated-main-color);\n}\n\nform {\n  background-color: var(--off-white);\n  max-width: 65%;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  border: 1px solid var(--dark-grey);\n  border-radius: 10px;\n  z-index: 10;\n  position: fixed;\n  box-shadow: 0 0 200px var(--main-color);\n  padding: 15px;\n  display: grid;\n}\n\n.button-style-reset {\n  cursor: pointer;\n  border: none;\n  outline: none;\n  background: none;\n}\n\n#overlay {\n  position: fixed;\n  opacity: 0;\n  transition: 200ms ease-in-out;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background-color: rgba(0, 0, 0, 0.5);\n  pointer-events: none;\n}\n\n#overlay.active {\n  opacity: 1;\n  pointer-events: all;\n}\n\n.todo-list {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n}\n\n.current-project {\n  border-bottom: solid 3px var(--desaturated-main-color);\n}\n\n.edit-btn {\n  width: 10%;\n  height: 10%;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  font: inherit;\n  box-sizing: border-box;\n}\n\n:root {\n  --main-color: #4338ca;\n  --desaturated-main-color: #818cf8;\n  --off-white: #f8f0e3;\n  --mid-grey: #a2a1aa;\n  --dark-grey: #222;\n}\n\n@font-face {\n  font-family: 'roboto';\n  src: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n}\n\nbody {\n  background-color: var(--desaturated-main-color);\n  font-family: 'roboto', sans-serif;\n}\n\naside {\n  background-color: var(--dark-grey);\n  height: 100vh;\n  grid-row: 1 / 3;\n  color: var(--off-white);\n}\n\n.page-wrapper {\n  display: grid;\n  grid-template-columns: 1fr 5fr;\n  grid-template-rows: 1fr 8fr;\n}\n\nheader {\n  grid-column: 2 / 3;\n}\n\nmain {\n  grid-column: 2 / 3;\n  margin-left: 35px;\n}\n\n.card {\n  display: grid;\n  width: 300px;\n  padding: 15px;\n  background-color: var(--off-white);\n  border-left: 4px solid var(--main-color);\n  box-shadow: 10px 10px 20px var(--main-color);\n}\n\n.project {\n  border: none;\n  cursor: pointer;\n  color: var(--off-white);\n}\n\n.project:hover {\n  border-bottom: solid 3px var(--desaturated-main-color);\n}\n\nform {\n  background-color: var(--off-white);\n  max-width: 65%;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  border: 1px solid var(--dark-grey);\n  border-radius: 10px;\n  z-index: 10;\n  position: fixed;\n  box-shadow: 0 0 200px var(--main-color);\n  padding: 15px;\n  display: grid;\n}\n\n.button-style-reset {\n  cursor: pointer;\n  border: none;\n  outline: none;\n  background: none;\n}\n\n#overlay {\n  position: fixed;\n  opacity: 0;\n  transition: 200ms ease-in-out;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background-color: rgba(0, 0, 0, 0.5);\n  pointer-events: none;\n}\n\n#overlay.active {\n  opacity: 1;\n  pointer-events: all;\n}\n\n.todo-list {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n}\n\n.current-project {\n  border-bottom: solid 3px var(--desaturated-main-color);\n}\n\n.icon {\n  width: 10%;\n  height: 10%;\n}\n", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;EACE,SAAS;EACT,UAAU;EACV,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,qBAAqB;EACrB,iCAAiC;EACjC,oBAAoB;EACpB,mBAAmB;EACnB,iBAAiB;AACnB;;AAEA;EACE,qBAAqB;EACrB,4CAAwC;AAC1C;;AAEA;EACE,+CAA+C;EAC/C,iCAAiC;AACnC;;AAEA;EACE,kCAAkC;EAClC,aAAa;EACb,eAAe;EACf,uBAAuB;AACzB;;AAEA;EACE,aAAa;EACb,8BAA8B;EAC9B,2BAA2B;AAC7B;;AAEA;EACE,kBAAkB;AACpB;;AAEA;EACE,kBAAkB;EAClB,iBAAiB;AACnB;;AAEA;EACE,aAAa;EACb,YAAY;EACZ,aAAa;EACb,kCAAkC;EAClC,wCAAwC;EACxC,4CAA4C;AAC9C;;AAEA;EACE,YAAY;EACZ,eAAe;EACf,uBAAuB;AACzB;;AAEA;EACE,sDAAsD;AACxD;;AAEA;EACE,kCAAkC;EAClC,cAAc;EACd,QAAQ;EACR,SAAS;EACT,gCAAgC;EAChC,kCAAkC;EAClC,mBAAmB;EACnB,WAAW;EACX,eAAe;EACf,uCAAuC;EACvC,aAAa;EACb,aAAa;AACf;;AAEA;EACE,eAAe;EACf,YAAY;EACZ,aAAa;EACb,gBAAgB;AAClB;;AAEA;EACE,eAAe;EACf,UAAU;EACV,6BAA6B;EAC7B,MAAM;EACN,SAAS;EACT,OAAO;EACP,QAAQ;EACR,oCAAoC;EACpC,oBAAoB;AACtB;;AAEA;EACE,UAAU;EACV,mBAAmB;AACrB;;AAEA;EACE,aAAa;EACb,8BAA8B;AAChC;;AAEA;EACE,sDAAsD;AACxD;;AAEA;EACE,UAAU;EACV,WAAW;AACb","sourcesContent":["* {\n  margin: 0;\n  padding: 0;\n  font: inherit;\n  box-sizing: border-box;\n}\n\n:root {\n  --main-color: #4338ca;\n  --desaturated-main-color: #818cf8;\n  --off-white: #f8f0e3;\n  --mid-grey: #a2a1aa;\n  --dark-grey: #222;\n}\n\n@font-face {\n  font-family: 'roboto';\n  src: url(/src/assets/Roboto-Regular.ttf);\n}\n\nbody {\n  background-color: var(--desaturated-main-color);\n  font-family: 'roboto', sans-serif;\n}\n\naside {\n  background-color: var(--dark-grey);\n  height: 100vh;\n  grid-row: 1 / 3;\n  color: var(--off-white);\n}\n\n.page-wrapper {\n  display: grid;\n  grid-template-columns: 1fr 5fr;\n  grid-template-rows: 1fr 8fr;\n}\n\nheader {\n  grid-column: 2 / 3;\n}\n\nmain {\n  grid-column: 2 / 3;\n  margin-left: 35px;\n}\n\n.card {\n  display: grid;\n  width: 300px;\n  padding: 15px;\n  background-color: var(--off-white);\n  border-left: 4px solid var(--main-color);\n  box-shadow: 10px 10px 20px var(--main-color);\n}\n\n.project {\n  border: none;\n  cursor: pointer;\n  color: var(--off-white);\n}\n\n.project:hover {\n  border-bottom: solid 3px var(--desaturated-main-color);\n}\n\nform {\n  background-color: var(--off-white);\n  max-width: 65%;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  border: 1px solid var(--dark-grey);\n  border-radius: 10px;\n  z-index: 10;\n  position: fixed;\n  box-shadow: 0 0 200px var(--main-color);\n  padding: 15px;\n  display: grid;\n}\n\n.button-style-reset {\n  cursor: pointer;\n  border: none;\n  outline: none;\n  background: none;\n}\n\n#overlay {\n  position: fixed;\n  opacity: 0;\n  transition: 200ms ease-in-out;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background-color: rgba(0, 0, 0, 0.5);\n  pointer-events: none;\n}\n\n#overlay.active {\n  opacity: 1;\n  pointer-events: all;\n}\n\n.todo-list {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n}\n\n.current-project {\n  border-bottom: solid 3px var(--desaturated-main-color);\n}\n\n.icon {\n  width: 10%;\n  height: 10%;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -560,12 +560,19 @@ function addTodo(todoArray) {
 
     const editBtn = document.createElement('button');
     const editIcon = document.createElement('img');
-    editBtn.classList.add('edit-btn', 'button-style-reset');
+    editBtn.classList.add('edit-btn', 'button-style-reset', 'icon');
     editIcon.src = '/src/assets/icons/file-edit.svg';
     editBtn.dataset.index = todoArray.indexOf(obj);
     editIcon.dataset.index = todoArray.indexOf(obj);
     editBtn.appendChild(editIcon);
     listItem.appendChild(editBtn);
+
+    const deleteBtn = document.createElement('button');
+    const deleteIcon = document.createElement('img');
+    deleteIcon.src = '/src/assets/icons/delete.svg';
+    deleteBtn.classList.add('delete-button', 'button-style-reset', 'icon');
+    listItem.appendChild(deleteBtn);
+    deleteBtn.appendChild(deleteIcon);
 
     const priority = document.createElement('select');
     const lowPriority = document.createElement('option');
@@ -627,6 +634,7 @@ function makeTodoForm() {
   titleInput.name = 'text';
   form.appendChild(titleLabel);
   form.appendChild(titleInput);
+  titleInput.required = true;
 
   const priorityLabel = document.createElement('label');
   priorityLabel.for = 'priority';
@@ -864,6 +872,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "makeProjectObj": () => (/* binding */ makeProjectObj),
 /* harmony export */   "makeTodoObj": () => (/* binding */ makeTodoObj),
 /* harmony export */   "projectList": () => (/* binding */ projectList),
+/* harmony export */   "removeTodoObj": () => (/* binding */ removeTodoObj),
 /* harmony export */   "updatePriority": () => (/* binding */ updatePriority)
 /* harmony export */ });
 /* harmony import */ var _dom_manipulation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dom-manipulation */ "./src/dom-manipulation.js");
@@ -932,6 +941,11 @@ function updatePriority(priority) {
     (element) => element.title === todoDomTitle.textContent
   );
   result.priority = priority.value;
+}
+
+function removeTodoObj(todo) {
+  const index = currentProject.todos.indexOf(todo);
+  currentProject.todos.splice(index, 1);
 }
 
 
@@ -1097,6 +1111,40 @@ __webpack_require__.r(__webpack_exports__);
 
 const addTodoBtn = document.querySelector('.add-todo');
 
+function deleteListener(todoArray) {
+  const deleteBtns = document.querySelectorAll('.delete-button');
+  deleteBtns.forEach((element) => {
+    element.addEventListener('click', () => {
+      const todoUl = document.querySelector('.todo-list');
+      const todoListItem = element.parentElement;
+
+      const index = todoListItem.dataset.index;
+      const todo = todoArray[index];
+      (0,_objects__WEBPACK_IMPORTED_MODULE_2__.removeTodoObj)(todo);
+      todoUl.removeChild(todoListItem);
+    });
+  });
+}
+function editListener(todoArray) {
+  const editBtn = document.querySelectorAll('.edit-btn');
+  editBtn.forEach((element) => {
+    element.addEventListener('click', () => {
+      const todoListItem = element.parentElement;
+
+      const index = todoListItem.dataset.index;
+      const todo = todoArray[index];
+
+      (0,_dom_manipulation__WEBPACK_IMPORTED_MODULE_1__.editTodoForm)(todo, todoArray);
+
+      const editSubmitBtn = document.getElementById('edit-todo-submit');
+
+      editSubmitBtn.addEventListener('click', () => {
+        deleteListener(todoArray);
+      });
+    });
+  });
+}
+
 addTodoBtn.addEventListener('click', () => {
   const todoForm = document.querySelector('.todo-form');
   if (todoForm === null) {
@@ -1106,6 +1154,7 @@ addTodoBtn.addEventListener('click', () => {
       event.preventDefault();
       (0,_dom_manipulation__WEBPACK_IMPORTED_MODULE_1__.removeTodoForm)();
     });
+
     const submitBtn = document.getElementById('todo-submit');
     submitBtn.addEventListener('click', (event) => {
       event.preventDefault();
@@ -1115,17 +1164,7 @@ addTodoBtn.addEventListener('click', () => {
       (0,_dom_manipulation__WEBPACK_IMPORTED_MODULE_1__.removeTodos)();
       (0,_dom_manipulation__WEBPACK_IMPORTED_MODULE_1__.addTodo)(todoArray);
 
-      const editBtn = document.querySelectorAll('.edit-btn');
-      editBtn.forEach((element) => {
-        element.addEventListener('click', () => {
-          const todoListItem = element.parentElement;
-
-          const index = todoListItem.dataset.index;
-          const todo = todoArray[index];
-
-          (0,_dom_manipulation__WEBPACK_IMPORTED_MODULE_1__.editTodoForm)(todo, todoArray);
-        });
-      });
+      editListener(todoArray);
     });
   } else if (document.querySelector('.todo-form') !== undefined) {
     (0,_dom_manipulation__WEBPACK_IMPORTED_MODULE_1__.removeTodoForm)();
@@ -1153,17 +1192,8 @@ addProjectBtn.addEventListener('click', () => {
         const todoArray = _objects__WEBPACK_IMPORTED_MODULE_2__.currentProject.todos;
         (0,_dom_manipulation__WEBPACK_IMPORTED_MODULE_1__.removeTodos)();
         (0,_dom_manipulation__WEBPACK_IMPORTED_MODULE_1__.addTodo)(todoArray);
-        const editBtn = document.querySelectorAll('.edit-btn');
-        editBtn.forEach((element) => {
-          element.addEventListener('click', () => {
-            const todoListItem = element.parentElement;
-
-            const index = todoListItem.dataset.index;
-            const todo = todoArray[index];
-
-            (0,_dom_manipulation__WEBPACK_IMPORTED_MODULE_1__.editTodoForm)(todo, todoArray);
-          });
-        });
+        editListener(todoArray);
+        deleteListener(todoArray);
       });
     });
   });
