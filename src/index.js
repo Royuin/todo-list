@@ -91,9 +91,14 @@ addProjectBtn.addEventListener('click', () => {
   const projectSubmit = document.getElementById('project-submit');
   projectSubmit.addEventListener('click', (event) => {
     event.preventDefault();
+    const title = document.getElementById('projectTitle').value;
+    if (projectList.some((project) => project.title === title)) {
+      return;
+    }
     makeProjectObj();
     const thisProject = projectList.slice(-1)[0];
     addProject(thisProject);
+
     const projectBtns = document.querySelectorAll('.project');
     projectBtns.forEach((item) => {
       item.addEventListener('click', () => {
