@@ -186,6 +186,7 @@ export function makeProjectForm() {
   titleInput.type = 'text';
   titleInput.id = 'projectTitle';
   titleInput.name = 'text';
+  titleInput.required = true;
   form.appendChild(titleLabel);
   form.appendChild(titleInput);
 
