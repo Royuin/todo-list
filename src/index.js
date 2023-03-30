@@ -92,7 +92,10 @@ addProjectBtn.addEventListener('click', () => {
   projectSubmit.addEventListener('click', (event) => {
     event.preventDefault();
     const title = document.getElementById('projectTitle').value;
-    if (projectList.some((project) => project.title === title)) {
+    if (
+      projectList.some((project) => project.title === title) ||
+      title === ''
+    ) {
       return;
     }
     makeProjectObj();
