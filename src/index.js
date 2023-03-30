@@ -90,14 +90,17 @@ addProjectBtn.addEventListener('click', () => {
   });
   const projectSubmit = document.getElementById('project-submit');
   projectSubmit.addEventListener('click', (event) => {
-    event.preventDefault();
     const title = document.getElementById('projectTitle').value;
     if (
       projectList.some((project) => project.title === title) ||
       title === ''
     ) {
+      const invalid = document.querySelector('.invalid');
+      invalid.style.display = '';
+      event.preventDefault() === false;
       return;
     }
+    event.preventDefault();
     makeProjectObj();
     const thisProject = projectList.slice(-1)[0];
     addProject(thisProject);
