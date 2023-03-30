@@ -189,6 +189,13 @@ export function makeProjectForm() {
   form.appendChild(titleLabel);
   form.appendChild(titleInput);
 
+  const invalidMessage = document.createElement('p');
+  invalidMessage.classList = 'invalid';
+  invalidMessage.textContent = 'Must be filled out and cannot use same title';
+  invalidMessage.style.display = 'none';
+  invalidMessage.style.color = 'red';
+  form.appendChild(invalidMessage);
+
   const submitBtn = document.createElement('button');
   submitBtn.textContent = 'Create Project';
   submitBtn.type = 'submit';
