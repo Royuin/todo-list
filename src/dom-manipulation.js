@@ -180,7 +180,8 @@ export function makeProjectForm() {
 
   const titleLabel = document.createElement('label');
   titleLabel.for = 'projectTitle';
-  titleLabel.textContent = 'Title';
+  titleLabel.textContent = '* Title';
+  titleLabel.style.color = 'black';
   const titleInput = document.createElement('input');
   titleInput.type = 'text';
   titleInput.id = 'projectTitle';
