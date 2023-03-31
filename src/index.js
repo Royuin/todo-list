@@ -21,6 +21,7 @@ import {
 } from './objects';
 
 const addTodoBtn = document.querySelector('.add-todo');
+const projectBtns = document.querySelectorAll('.project');
 
 function deleteListener(todoArray) {
   const deleteBtns = document.querySelectorAll('.delete-button');
