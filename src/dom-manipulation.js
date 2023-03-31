@@ -16,6 +16,9 @@ export function removeTodos() {
 }
 
 export function addTodo(todoArray) {
+  if (todoArray === undefined) {
+    return;
+  }
   for (let i = 0; i < todoArray.length; i += 1) {
     const obj = todoArray[i];
     const ul = document.querySelector('.todo-list');
