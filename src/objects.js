@@ -3,20 +3,17 @@ import {
   changeProjectTodos,
 } from './dom-manipulation';
 
-const defaultProject = document.querySelector('.my-project');
 
-const myProject = {
-  title: defaultProject.textContent,
-  todos: [],
-};
-
-export const projectList = [myProject];
+export const projectList = [];
+export let currentProject;
 
 function todoFactory(title, priority, description, due) {
   return { title, priority, description, due };
 }
 
-export let currentProject = myProject;
+export function setStoredCurentProject(obj) {
+  currentProject = obj;
+}
 
 function addToProject(todo) {
   currentProject.todos.push(todo);
@@ -32,11 +29,20 @@ export function makeTodoObj() {
   addToProject(todo);
 }
 
+export function updateStorage(projects) {
+  localStorage.clear();
+  localStorage.setItem('current project', JSON.stringify(currentProject));
+  projects.forEach((project) => {
+    JSON.stringify(project);
+  });
+  localStorage.setItem("projectList", JSON.stringify(projects));
+}
+
 function projectFactory(title) {
   return { title, todos: [] };
 }
 
-function addToProjectList(project) {
+export function addToProjectList(project) {
   projectList.push(project);
 }
 
