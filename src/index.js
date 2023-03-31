@@ -57,6 +57,24 @@ function editListener(todoArray) {
   });
 }
 
+(function parseStorage() {
+  const projectStorage = localStorage.getItem('projectList');
+  if (projectStorage !== null) {
+    const projects = JSON.parse(projectStorage);
+    const currentProjectString = localStorage.getItem('current project');
+    const updatedProject = JSON.parse(currentProjectString);
+    const currentTitle = updatedProject.title;
+
+    projects.forEach((element) => {
+      addToProjectList(element);
+      addProject(element);
+    });
+
+    const currentProjectDom = document.getElementById(currentTitle);
+    changeCurrentProject(currentProjectDom);
+  }
+})();
+
 addTodoBtn.addEventListener('click', () => {
   const todoForm = document.querySelector('.todo-form');
   if (todoForm === null) {
