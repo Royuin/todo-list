@@ -21,7 +21,6 @@ import {
 } from './objects';
 
 const addTodoBtn = document.querySelector('.add-todo');
-const projectBtns = document.querySelectorAll('.project');
 
 function deleteListener(todoArray) {
   const deleteBtns = document.querySelectorAll('.delete-button');
@@ -58,6 +57,20 @@ function editListener(todoArray) {
   });
 }
 
+function projectListeners() {
+  const projectBtns = document.querySelectorAll('.project');
+  projectBtns.forEach((item) => {
+    item.addEventListener('click', () => {
+      changeCurrentProject(item);
+      const todoArray = currentProject.todos;
+      removeTodos();
+      addTodo(todoArray);
+      editListener(todoArray);
+      deleteListener(todoArray);
+    });
+  });
+}
+
 (function parseStorage() {
   const projectStorage = localStorage.getItem('projectList');
   if (projectStorage !== null) {
@@ -73,6 +86,7 @@ function editListener(todoArray) {
 
     const currentProjectDom = document.getElementById(currentTitle);
     changeCurrentProject(currentProjectDom);
+    projectListeners();
   }
 })();
 
@@ -127,16 +141,6 @@ addProjectBtn.addEventListener('click', () => {
     const thisProject = projectList.slice(-1)[0];
     addProject(thisProject);
     updateStorage(projectList);
-
-    projectBtns.forEach((item) => {
-      item.addEventListener('click', () => {
-        changeCurrentProject(item);
-        const todoArray = currentProject.todos;
-        removeTodos();
-        addTodo(todoArray);
-        editListener(todoArray);
-        deleteListener(todoArray);
-      });
-    });
+    projectListeners();
   });
 });
