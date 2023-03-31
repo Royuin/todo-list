@@ -16,6 +16,8 @@ import {
   makeProjectObj,
   changeCurrentProject,
   removeTodoObj,
+  updateStorage,
+  addToProjectList,
 } from './objects';
 
 const addTodoBtn = document.querySelector('.add-todo');
@@ -34,6 +36,7 @@ function deleteListener(todoArray) {
     });
   });
 }
+
 function editListener(todoArray) {
   const editBtn = document.querySelectorAll('.edit-btn');
   editBtn.forEach((element) => {
@@ -104,8 +107,8 @@ addProjectBtn.addEventListener('click', () => {
     makeProjectObj();
     const thisProject = projectList.slice(-1)[0];
     addProject(thisProject);
+    updateStorage(projectList);
 
-    const projectBtns = document.querySelectorAll('.project');
     projectBtns.forEach((item) => {
       item.addEventListener('click', () => {
         changeCurrentProject(item);
