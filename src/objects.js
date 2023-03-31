@@ -59,6 +59,8 @@ export function changeCurrentProject(projectItem) {
     if (element.title === projectTitle) {
       currentProject = element;
       changeCurrentProjectClass(projectItem);
+      localStorage.removeItem('current project');
+      localStorage.setItem('current project', JSON.stringify(currentProject));
     }
   });
 }
