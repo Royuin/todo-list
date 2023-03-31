@@ -86,6 +86,7 @@ function projectListeners() {
 
     const currentProjectDom = document.getElementById(currentTitle);
     changeCurrentProject(currentProjectDom);
+    addTodo(currentProject.todos);
     projectListeners();
   }
 })();
@@ -110,6 +111,7 @@ addTodoBtn.addEventListener('click', () => {
       addTodo(todoArray);
 
       editListener(todoArray);
+      updateStorage(projectList);
     });
   } else if (document.querySelector('.todo-form') !== undefined) {
     removeTodoForm();
@@ -124,6 +126,7 @@ addProjectBtn.addEventListener('click', () => {
     event.preventDefault();
     removeProjectForm();
   });
+
   const projectSubmit = document.getElementById('project-submit');
   projectSubmit.addEventListener('click', (event) => {
     const title = document.getElementById('projectTitle').value;
