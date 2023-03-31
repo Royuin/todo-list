@@ -30,6 +30,10 @@ export function updateStorage(projects) {
   localStorage.setItem('current project', JSON.stringify(currentProject));
   projects.forEach((project) => {
     JSON.stringify(project);
+    JSON.stringify(project.todos);
+    project.todos.forEach((todo) => {
+      JSON.stringify(todo);
+    });
   });
   localStorage.setItem('projectList', JSON.stringify(projects));
 }
