@@ -1,8 +1,4 @@
-import {
-  changeCurrentProjectClass,
-  changeProjectTodos,
-} from './dom-manipulation';
-
+import { changeCurrentProjectClass } from './dom-manipulation';
 
 export const projectList = [];
 export let currentProject;
@@ -35,7 +31,7 @@ export function updateStorage(projects) {
   projects.forEach((project) => {
     JSON.stringify(project);
   });
-  localStorage.setItem("projectList", JSON.stringify(projects));
+  localStorage.setItem('projectList', JSON.stringify(projects));
 }
 
 function projectFactory(title) {
