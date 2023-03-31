@@ -163,6 +163,7 @@ export function addProject(obj) {
 
   const projectBtn = document.createElement('button');
   projectBtn.className += 'project button-style-reset ';
+  projectBtn.setAttribute('id',projectTitle);
   projectBtn.textContent = projectTitle;
   newLi.appendChild(projectBtn);
 }
