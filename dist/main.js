@@ -546,6 +546,9 @@ function removeTodos() {
 }
 
 function addTodo(todoArray) {
+  if (todoArray === undefined) {
+    return;
+  }
   for (let i = 0; i < todoArray.length; i += 1) {
     const obj = todoArray[i];
     const ul = document.querySelector('.todo-list');
@@ -634,7 +637,6 @@ function makeTodoForm() {
   titleInput.name = 'text';
   form.appendChild(titleLabel);
   form.appendChild(titleInput);
-  titleInput.required = true;
 
   const priorityLabel = document.createElement('label');
   priorityLabel.for = 'priority';
@@ -691,6 +693,7 @@ function addProject(obj) {
 
   const projectBtn = document.createElement('button');
   projectBtn.className += 'project button-style-reset ';
+  projectBtn.setAttribute('id',projectTitle);
   projectBtn.textContent = projectTitle;
   newLi.appendChild(projectBtn);
 }
@@ -711,13 +714,22 @@ function makeProjectForm() {
 
   const titleLabel = document.createElement('label');
   titleLabel.for = 'projectTitle';
-  titleLabel.textContent = 'Title';
+  titleLabel.textContent = '* Title';
+  titleLabel.style.color = 'black';
   const titleInput = document.createElement('input');
   titleInput.type = 'text';
   titleInput.id = 'projectTitle';
   titleInput.name = 'text';
+  titleInput.required = true;
   form.appendChild(titleLabel);
   form.appendChild(titleInput);
+
+  const invalidMessage = document.createElement('p');
+  invalidMessage.classList = 'invalid';
+  invalidMessage.textContent = 'Must be filled out and cannot use same title';
+  invalidMessage.style.display = 'none';
+  invalidMessage.style.color = 'red';
+  form.appendChild(invalidMessage);
 
   const submitBtn = document.createElement('button');
   submitBtn.textContent = 'Create Project';
@@ -867,31 +879,30 @@ function editTodoForm(todoObj, todoArray) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "addToProjectList": () => (/* binding */ addToProjectList),
 /* harmony export */   "changeCurrentProject": () => (/* binding */ changeCurrentProject),
 /* harmony export */   "currentProject": () => (/* binding */ currentProject),
 /* harmony export */   "makeProjectObj": () => (/* binding */ makeProjectObj),
 /* harmony export */   "makeTodoObj": () => (/* binding */ makeTodoObj),
 /* harmony export */   "projectList": () => (/* binding */ projectList),
 /* harmony export */   "removeTodoObj": () => (/* binding */ removeTodoObj),
-/* harmony export */   "updatePriority": () => (/* binding */ updatePriority)
+/* harmony export */   "setStoredCurentProject": () => (/* binding */ setStoredCurentProject),
+/* harmony export */   "updatePriority": () => (/* binding */ updatePriority),
+/* harmony export */   "updateStorage": () => (/* binding */ updateStorage)
 /* harmony export */ });
 /* harmony import */ var _dom_manipulation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dom-manipulation */ "./src/dom-manipulation.js");
 
 
-const defaultProject = document.querySelector('.my-project');
-
-const myProject = {
-  title: defaultProject.textContent,
-  todos: [],
-};
-
-const projectList = [myProject];
+const projectList = [];
+let currentProject;
 
 function todoFactory(title, priority, description, due) {
   return { title, priority, description, due };
 }
 
-let currentProject = myProject;
+function setStoredCurentProject(obj) {
+  currentProject = obj;
+}
 
 function addToProject(todo) {
   currentProject.todos.push(todo);
@@ -905,6 +916,19 @@ function makeTodoObj() {
 
   const todo = todoFactory(title, priority, description, dateDue);
   addToProject(todo);
+}
+
+function updateStorage(projects) {
+  localStorage.clear();
+  localStorage.setItem('current project', JSON.stringify(currentProject));
+  projects.forEach((project) => {
+    JSON.stringify(project);
+    JSON.stringify(project.todos);
+    project.todos.forEach((todo) => {
+      JSON.stringify(todo);
+    });
+  });
+  localStorage.setItem('projectList', JSON.stringify(projects));
 }
 
 function projectFactory(title) {
@@ -928,6 +952,8 @@ function changeCurrentProject(projectItem) {
     if (element.title === projectTitle) {
       currentProject = element;
       (0,_dom_manipulation__WEBPACK_IMPORTED_MODULE_0__.changeCurrentProjectClass)(projectItem);
+      localStorage.removeItem('current project');
+      localStorage.setItem('current project', JSON.stringify(currentProject));
     }
   });
 }
@@ -1125,6 +1151,7 @@ function deleteListener(todoArray) {
     });
   });
 }
+
 function editListener(todoArray) {
   const editBtn = document.querySelectorAll('.edit-btn');
   editBtn.forEach((element) => {
@@ -1144,6 +1171,40 @@ function editListener(todoArray) {
     });
   });
 }
+
+function projectListeners() {
+  const projectBtns = document.querySelectorAll('.project');
+  projectBtns.forEach((item) => {
+    item.addEventListener('click', () => {
+      (0,_objects__WEBPACK_IMPORTED_MODULE_2__.changeCurrentProject)(item);
+      const todoArray = _objects__WEBPACK_IMPORTED_MODULE_2__.currentProject.todos;
+      (0,_dom_manipulation__WEBPACK_IMPORTED_MODULE_1__.removeTodos)();
+      (0,_dom_manipulation__WEBPACK_IMPORTED_MODULE_1__.addTodo)(todoArray);
+      editListener(todoArray);
+      deleteListener(todoArray);
+    });
+  });
+}
+
+(function parseStorage() {
+  const projectStorage = localStorage.getItem('projectList');
+  if (projectStorage !== null) {
+    const projects = JSON.parse(projectStorage);
+    const currentProjectString = localStorage.getItem('current project');
+    const updatedProject = JSON.parse(currentProjectString);
+    const currentTitle = updatedProject.title;
+
+    projects.forEach((element) => {
+      (0,_objects__WEBPACK_IMPORTED_MODULE_2__.addToProjectList)(element);
+      (0,_dom_manipulation__WEBPACK_IMPORTED_MODULE_1__.addProject)(element);
+    });
+
+    const currentProjectDom = document.getElementById(currentTitle);
+    (0,_objects__WEBPACK_IMPORTED_MODULE_2__.changeCurrentProject)(currentProjectDom);
+    (0,_dom_manipulation__WEBPACK_IMPORTED_MODULE_1__.addTodo)(_objects__WEBPACK_IMPORTED_MODULE_2__.currentProject.todos);
+    projectListeners();
+  }
+})();
 
 addTodoBtn.addEventListener('click', () => {
   const todoForm = document.querySelector('.todo-form');
@@ -1165,6 +1226,7 @@ addTodoBtn.addEventListener('click', () => {
       (0,_dom_manipulation__WEBPACK_IMPORTED_MODULE_1__.addTodo)(todoArray);
 
       editListener(todoArray);
+      (0,_objects__WEBPACK_IMPORTED_MODULE_2__.updateStorage)(_objects__WEBPACK_IMPORTED_MODULE_2__.projectList);
     });
   } else if (document.querySelector('.todo-form') !== undefined) {
     (0,_dom_manipulation__WEBPACK_IMPORTED_MODULE_1__.removeTodoForm)();
@@ -1179,23 +1241,25 @@ addProjectBtn.addEventListener('click', () => {
     event.preventDefault();
     (0,_dom_manipulation__WEBPACK_IMPORTED_MODULE_1__.removeProjectForm)();
   });
+
   const projectSubmit = document.getElementById('project-submit');
   projectSubmit.addEventListener('click', (event) => {
+    const title = document.getElementById('projectTitle').value;
+    if (
+      _objects__WEBPACK_IMPORTED_MODULE_2__.projectList.some((project) => project.title === title) ||
+      title === ''
+    ) {
+      const invalid = document.querySelector('.invalid');
+      invalid.style.display = '';
+      event.preventDefault() === false;
+      return;
+    }
     event.preventDefault();
     (0,_objects__WEBPACK_IMPORTED_MODULE_2__.makeProjectObj)();
     const thisProject = _objects__WEBPACK_IMPORTED_MODULE_2__.projectList.slice(-1)[0];
     (0,_dom_manipulation__WEBPACK_IMPORTED_MODULE_1__.addProject)(thisProject);
-    const projectBtns = document.querySelectorAll('.project');
-    projectBtns.forEach((item) => {
-      item.addEventListener('click', () => {
-        (0,_objects__WEBPACK_IMPORTED_MODULE_2__.changeCurrentProject)(item);
-        const todoArray = _objects__WEBPACK_IMPORTED_MODULE_2__.currentProject.todos;
-        (0,_dom_manipulation__WEBPACK_IMPORTED_MODULE_1__.removeTodos)();
-        (0,_dom_manipulation__WEBPACK_IMPORTED_MODULE_1__.addTodo)(todoArray);
-        editListener(todoArray);
-        deleteListener(todoArray);
-      });
-    });
+    (0,_objects__WEBPACK_IMPORTED_MODULE_2__.updateStorage)(_objects__WEBPACK_IMPORTED_MODULE_2__.projectList);
+    projectListeners();
   });
 });
 
