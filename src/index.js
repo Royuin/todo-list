@@ -20,7 +20,7 @@ import {
   addToProjectList,
 } from './objects';
 import '/src/assets/icons/delete.svg';
-import 'src/assets/icons/file-edit.svg';
+import '/src/assets/icons/file-edit.svg';
 
 const addTodoBtn = document.querySelector('.add-todo');
 
