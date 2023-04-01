@@ -983,7 +983,7 @@ function removeTodoObj(todo) {
   \***************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "fc2b5060f7accec5cf74.ttf";
+module.exports = __webpack_require__.p + "Roboto-Regular.ttf";
 
 /***/ }),
 
@@ -993,7 +993,17 @@ module.exports = __webpack_require__.p + "fc2b5060f7accec5cf74.ttf";
   \*************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "bde675c38d54979f589e.svg";
+module.exports = __webpack_require__.p + "delete.svg";
+
+/***/ }),
+
+/***/ "./src/assets/icons/file-edit.svg":
+/*!****************************************!*\
+  !*** ./src/assets/icons/file-edit.svg ***!
+  \****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "file-edit.svg";
 
 /***/ })
 
@@ -1142,7 +1152,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _dom_manipulation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dom-manipulation */ "./src/dom-manipulation.js");
 /* harmony import */ var _objects__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./objects */ "./src/objects.js");
 /* harmony import */ var _src_assets_icons_delete_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../src/assets/icons/delete.svg */ "./src/assets/icons/delete.svg");
-Object(function webpackMissingModule() { var e = new Error("Cannot find module 'src/assets/icons/file-edit.svg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _src_assets_icons_file_edit_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../src/assets/icons/file-edit.svg */ "./src/assets/icons/file-edit.svg");
 
 
 
