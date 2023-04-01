@@ -528,6 +528,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "removeTodos": () => (/* binding */ removeTodos)
 /* harmony export */ });
 /* harmony import */ var _objects__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./objects */ "./src/objects.js");
+/* harmony import */ var _assets_icons_delete_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/icons/delete.svg */ "./src/assets/icons/delete.svg");
+/* harmony import */ var _assets_icons_file_edit_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/icons/file-edit.svg */ "./src/assets/icons/file-edit.svg");
+
+
 
 
 function removeTodoForm() {
@@ -564,7 +568,7 @@ function addTodo(todoArray) {
     const editBtn = document.createElement('button');
     const editIcon = document.createElement('img');
     editBtn.classList.add('edit-btn', 'button-style-reset', 'icon');
-    editIcon.src = '/src/assets/icons/file-edit.svg';
+    editIcon.src = _assets_icons_file_edit_svg__WEBPACK_IMPORTED_MODULE_2__;
     editBtn.dataset.index = todoArray.indexOf(obj);
     editIcon.dataset.index = todoArray.indexOf(obj);
     editBtn.appendChild(editIcon);
@@ -572,7 +576,7 @@ function addTodo(todoArray) {
 
     const deleteBtn = document.createElement('button');
     const deleteIcon = document.createElement('img');
-    deleteIcon.src = '/src/assets/icons/delete.svg';
+    deleteIcon.src = _assets_icons_delete_svg__WEBPACK_IMPORTED_MODULE_1__;
     deleteBtn.classList.add('delete-button', 'button-style-reset', 'icon');
     listItem.appendChild(deleteBtn);
     deleteBtn.appendChild(deleteIcon);
@@ -693,7 +697,7 @@ function addProject(obj) {
 
   const projectBtn = document.createElement('button');
   projectBtn.className += 'project button-style-reset ';
-  projectBtn.setAttribute('id',projectTitle);
+  projectBtn.setAttribute('id', projectTitle);
   projectBtn.textContent = projectTitle;
   newLi.appendChild(projectBtn);
 }
@@ -1151,10 +1155,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
 /* harmony import */ var _dom_manipulation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dom-manipulation */ "./src/dom-manipulation.js");
 /* harmony import */ var _objects__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./objects */ "./src/objects.js");
-/* harmony import */ var _src_assets_icons_delete_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../src/assets/icons/delete.svg */ "./src/assets/icons/delete.svg");
-/* harmony import */ var _src_assets_icons_file_edit_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../src/assets/icons/file-edit.svg */ "./src/assets/icons/file-edit.svg");
-
-
 
 
 
@@ -1249,6 +1249,7 @@ addTodoBtn.addEventListener('click', () => {
       (0,_dom_manipulation__WEBPACK_IMPORTED_MODULE_1__.removeTodos)();
       (0,_dom_manipulation__WEBPACK_IMPORTED_MODULE_1__.addTodo)(todoArray);
 
+      deleteListener(todoArray);
       editListener(todoArray);
       (0,_objects__WEBPACK_IMPORTED_MODULE_2__.updateStorage)(_objects__WEBPACK_IMPORTED_MODULE_2__.projectList);
     });
