@@ -1,4 +1,6 @@
 import { updatePriority } from './objects';
+import deleteSvg from './assets/icons/delete.svg';
+import fileEditSvg from './assets/icons/file-edit.svg';
 
 export function removeTodoForm() {
   const overlay = document.getElementById('overlay');
@@ -34,7 +36,7 @@ export function addTodo(todoArray) {
     const editBtn = document.createElement('button');
     const editIcon = document.createElement('img');
     editBtn.classList.add('edit-btn', 'button-style-reset', 'icon');
-    editIcon.src = '/src/assets/icons/file-edit.svg';
+    editIcon.src = fileEditSvg;
     editBtn.dataset.index = todoArray.indexOf(obj);
     editIcon.dataset.index = todoArray.indexOf(obj);
     editBtn.appendChild(editIcon);
@@ -42,7 +44,7 @@ export function addTodo(todoArray) {
 
     const deleteBtn = document.createElement('button');
     const deleteIcon = document.createElement('img');
-    deleteIcon.src = '/src/assets/icons/delete.svg';
+    deleteIcon.src = deleteSvg;
     deleteBtn.classList.add('delete-button', 'button-style-reset', 'icon');
     listItem.appendChild(deleteBtn);
     deleteBtn.appendChild(deleteIcon);
@@ -163,7 +165,7 @@ export function addProject(obj) {
 
   const projectBtn = document.createElement('button');
   projectBtn.className += 'project button-style-reset ';
-  projectBtn.setAttribute('id',projectTitle);
+  projectBtn.setAttribute('id', projectTitle);
   projectBtn.textContent = projectTitle;
   newLi.appendChild(projectBtn);
 }
