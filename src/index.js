@@ -88,6 +88,8 @@ function projectListeners() {
     changeCurrentProject(currentProjectDom);
     addTodo(currentProject.todos);
     projectListeners();
+    deleteListener(currentProject.todos);
+    editListener(currentProject.todos);
   }
 })();
 
