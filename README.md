@@ -2,4 +2,5 @@
 
 ## TO DO
 
-- Add local storage for projects and todos
+- Fix dates not updating properly when editing created todo
+- Reduce white space on page
