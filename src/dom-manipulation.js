@@ -309,7 +309,7 @@ export function editTodoForm(todoObj, todoArray) {
   dueDateInput.name = 'due';
   form.appendChild(dueDateLabel);
   form.appendChild(dueDateInput);
-  dueDateInput.value = todoObj.dateDue;
+  dueDateInput.value = todoObj.due;
 
   const submitBtn = document.createElement('button');
   submitBtn.textContent = 'Edit To-do';
@@ -322,7 +322,7 @@ export function editTodoForm(todoObj, todoArray) {
     todoObj.title = titleInput.value;
     todoObj.priority = priorityInput.value;
     todoObj.description = descriptionTextarea.value;
-    todoObj.dateDue = dueDateInput.value;
+    todoObj.due = dueDateInput.value;
 
     removeTodos();
     addTodo(todoArray);
