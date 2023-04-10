@@ -33,6 +33,7 @@ function deleteListener(todoArray) {
       const todo = todoArray[index];
       removeTodoObj(todo);
       todoUl.removeChild(todoListItem);
+      updateStorage(projectList);
     });
   });
 }
