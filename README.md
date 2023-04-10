@@ -6,6 +6,14 @@ This project was made after learning about modules and basic OOP principles like
 
 Functionality of project includes making todos for a selected project and using local storage to save all projects and todos. The todos can then be edited or deleted while it updates local storage and will only affect the current project selected. Users can also create new projects and switch back and forth.
 
+## What was learned
+
+- JSON
+- Creating a modal
+- Local storage
+- Webpack source maps
+- S.O.L.I.D. OOP
+
 ## TO DO
 
 - Fix dates not updating properly when editing created todo
