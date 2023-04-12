@@ -53,6 +53,7 @@ function editListener(todoArray) {
 
       editSubmitBtn.addEventListener('click', () => {
         deleteListener(todoArray);
+        updateStorage(projectList);
       });
     });
   });
