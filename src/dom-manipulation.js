@@ -80,6 +80,7 @@ export function addTodo(todoArray) {
     const dueDate = document.createElement('input');
     dueDate.type = 'date';
     dueDate.value = obj.due;
+    dueDate.classList = 'date';
     listItem.appendChild(dueDate);
 
     ul.appendChild(listItem);
