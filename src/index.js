@@ -59,6 +59,24 @@ function editListener(todoArray) {
   });
 }
 
+function dateListeners(todoArray) {
+  const dates = document.querySelectorAll('.date');
+  dates.forEach((element) => {
+    element.addEventListener('input', () => {
+      const todoListItem = element.parentElement;
+
+      const index = todoListItem.dataset.index;
+      const todo = todoArray[index];
+
+      todo.due = element.value;
+
+      console.log();
+
+      updateStorage(projectList);
+    });
+  });
+}
+
 function projectListeners() {
   const projectBtns = document.querySelectorAll('.project');
   projectBtns.forEach((item) => {
@@ -92,6 +110,7 @@ function projectListeners() {
     projectListeners();
     deleteListener(currentProject.todos);
     editListener(currentProject.todos);
+    dateListeners(currentProject.todos);
   }
 })();
 
@@ -116,6 +135,7 @@ addTodoBtn.addEventListener('click', () => {
 
       deleteListener(todoArray);
       editListener(todoArray);
+      dateListeners(currentProject.todos);
       updateStorage(projectList);
     });
   } else if (document.querySelector('.todo-form') !== undefined) {
