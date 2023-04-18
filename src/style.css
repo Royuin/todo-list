@@ -116,3 +116,21 @@ form {
   width: 10%;
   height: 10%;
 }
+
+.no-project-wrapper {
+  font-size: 1.5rem;
+  background-color: var(--off-white);
+  max-width: 65%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid var(--dark-grey);
+  border-radius: 10px;
+  z-index: 10;
+  position: fixed;
+  box-shadow: 0 0 200px var(--main-color);
+  padding: 3vw;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
