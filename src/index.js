@@ -172,5 +172,10 @@ addProjectBtn.addEventListener('click', () => {
     addProject(thisProject);
     updateStorage(projectList);
     projectListeners();
+
+    if (projectList.length === 1) {
+      const projectItem = document.getElementById(thisProject.title);
+      changeCurrentProject(projectItem);
+    }
   });
 });
