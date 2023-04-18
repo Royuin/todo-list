@@ -340,3 +340,30 @@ export function editTodoForm(todoObj, todoArray) {
     });
   });
 }
+
+export function noProjectError() {
+  const overlay = document.getElementById('overlay');
+  overlay.classList = 'active';
+
+  const todoHeader = document.querySelector('.todo-header');
+
+  const noProjectWrapper = document.createElement('div');
+  noProjectWrapper.classList = 'no-project-wrapper';
+  todoHeader.appendChild(noProjectWrapper);
+
+  const exitButton = document.createElement('button');
+  exitButton.classList.add('exit-button', 'button-style-reset');
+  exitButton.textContent = 'X';
+  noProjectWrapper.appendChild(exitButton);
+
+  const noProjectError = document.createElement('span');
+  noProjectError.classList = 'no-project-error';
+  noProjectError.textContent =
+    "Oops! Looks like you don't have a project yet. Please make a project before making a todo.";
+  noProjectWrapper.appendChild(noProjectError);
+
+  exitButton.addEventListener('click', () => {
+    todoHeader.removeChild(noProjectWrapper);
+    overlay.classList.remove('active');
+  });
+}
