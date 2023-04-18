@@ -8,6 +8,7 @@ import {
   addProject,
   editTodoForm,
   removeTodos,
+  noProjectError,
 } from './dom-manipulation';
 import {
   makeTodoObj,
@@ -70,8 +71,6 @@ function dateListeners(todoArray) {
 
       todo.due = element.value;
 
-      console.log();
-
       updateStorage(projectList);
     });
   });
@@ -116,7 +115,10 @@ function projectListeners() {
 
 addTodoBtn.addEventListener('click', () => {
   const todoForm = document.querySelector('.todo-form');
-  if (todoForm === null) {
+
+  if (projectList.length === 0) {
+    noProjectError();
+  } else if (todoForm === null) {
     makeTodoForm();
     const exitBtn = document.querySelector('.exit-button');
     exitBtn.addEventListener('click', (event) => {
