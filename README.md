@@ -24,6 +24,4 @@ Functionality of project includes making todos for a selected project and using 
 
 ## TO DO
 
-- Fix dates not updating properly when editing created todo
 - Reduce white space on page
-- Fix delete not removing from local storage
