@@ -110,6 +110,7 @@ form > * {
 .todo-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  row-gap: 35px;
 }
 
 .current-project {
