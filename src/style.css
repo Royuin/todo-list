@@ -68,6 +68,7 @@ main {
   border: none;
   cursor: pointer;
   color: var(--off-white);
+  margin-left: 7%;
 }
 
 .project:hover {
