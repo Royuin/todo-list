@@ -22,8 +22,12 @@ Functionality of project includes making todos for a selected project and using 
 - Webpack source maps
 - S.O.L.I.D. OOP
 
+## Features
+
+- Local storage to save created projects and todos
+
 ## TO DO
 
 - Reduce white space on page
-- Make responsive 
+- Make responsive
 - Improve styling for project and todo buttons and project list
