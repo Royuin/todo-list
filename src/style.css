@@ -189,12 +189,15 @@ form > * {
 
   .todo-form {
     place-content: center;
-    width: 100%;
-    padding: 25px 0;
+    width: 75%;
   }
 
   .todo-form > * {
     font-size: clamp(15px, 3vw, 25px);
+    width: 100%;
+  }
+
+  .project-form > * {
     width: 100%;
   }
 }
