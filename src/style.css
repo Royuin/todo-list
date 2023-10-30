@@ -122,6 +122,7 @@ form > * {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   padding: 5%;
   gap: 4vw;
+  justify-content: center;
 }
 
 .current-project {
