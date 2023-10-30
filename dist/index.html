@@ -11,20 +11,29 @@
 
 <body>
   <div class="page-wrapper">
-    <aside>
-      <header class="project-header">
+    <div class="mobile-wrapper">
+      <aside>
+        <header class="project-header">
+          <h1>Your Projects</h1>
+          <br>
+          <button class="add-project">+ New Project</button>
+        </header>
+        <section class="project-section">
+          <ul class="project-list"></ul>
+        </section>
+      </aside>
+
+      <header class="todo-header">
+        <button class="add-todo">+ Add To-do</button>
+        <!-- <div class="project-header">
         <h1>Your Projects</h1>
         <br>
         <button class="add-project">+ New Project</button>
+        <section class="project-section">
+          <ul class="project-list"></ul>
+        </section> -->
       </header>
-      <section class="project-section">
-        <ul class="project-list"></ul>
-      </section>
-    </aside>
-
-    <header class="todo-header">
-      <button class="add-todo">+ Add To-do</button>
-    </header>
+    </div>
     <main>
       <ul class="todo-list"></ul>
     </main>
