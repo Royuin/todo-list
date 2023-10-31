@@ -28,6 +28,4 @@ Functionality of project includes making todos for a selected project and using 
 
 ## TO DO
 
-- Reduce white space on page
-- Make responsive
 - Improve styling for project and todo buttons and project list
