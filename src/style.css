@@ -23,10 +23,12 @@ body {
   font-family: 'roboto', sans-serif;
 }
 
+.mobile-wrapper {
+  min-height: 100vh;
+}
+
 aside {
   background-color: var(--dark-grey);
-  height: 100vh;
-  grid-row: 1 / 3;
   color: var(--off-white);
   flex-grow: 1;
 }
@@ -34,15 +36,6 @@ aside {
 .page-wrapper {
   display: grid;
   grid-template-columns: 1.5fr 5fr;
-  grid-template-rows: 1fr 8fr;
-}
-
-header {
-  grid-column: 2 / 3;
-}
-
-main {
-  grid-column: 2 / 3;
 }
 
 .card {
@@ -154,25 +147,20 @@ form > * {
 
 .mobile-wrapper {
   display: flex;
-  grid-row: 1 / 3;
 }
 
 @media (max-width: 850px) {
-  .project-header {
-    grid-column: 1 / 3;
-  }
-
-  .mobile-wrapper {
-    grid-column: 1 / 3;
+  .page-wrapper {
     display: block;
   }
 
-  main {
-    grid-column: 1 / 3;
+  .mobile-wrapper {
+    display: block;
+    min-height: auto;
+    margin-bottom: 1rem;
   }
 
   aside {
-    height: auto;
     padding-bottom: 15px;
   }
 
